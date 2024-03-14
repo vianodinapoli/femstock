@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::get(uri:'/users', action: [UserController::class, 'index'])->name(name:'users.index');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get(uri:'/users/create', action: [UserController::class, 'create'])->name(name:'users.create');
 
-Auth::routes();
+Route::post(uri:'/users', action: [UserController::class, 'store'])->name(name:'users.store');
+Route::post(uri:'/users{user}', action: [UserController::class, 'show'])->name(name:'users.show');
+Route::post(uri:'/users{user}/edit', action: [UserController::class, 'edit'])->name(name:'users.edit');
+Route::put(uri:'/users{user}', action: [UserController::class, 'update'])->name(name:'users.update');
+Route::delete(uri:'/users{user}', action: [UserController::class, 'destroy'])->name(name:'users.destroy');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

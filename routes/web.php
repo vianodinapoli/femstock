@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Routes;
-
+use App\Http\Controllers\GemulexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +32,4 @@ Route::put(uri:'/users{user}', action: [UserController::class, 'update'])->name(
 Route::delete(uri:'/users{user}', action: [UserController::class, 'destroy'])->name(name:'users.destroy');
 
 // route::resource('users', UserController::class); uma forma de resumir tudo isso numa linha só!
+Route::resource('gemulex', GemulexController::class);

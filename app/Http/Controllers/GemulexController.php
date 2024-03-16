@@ -29,7 +29,7 @@ class GemulexController extends Controller
      */
     public function store(Request $request)
     {
-        Gemulex::create($request->all());
+        Gemulex32::create($request->all());
         return redirect()->route('gemulex.index');
     }
 
@@ -38,7 +38,7 @@ class GemulexController extends Controller
      */
     public function show(string $id)
     {
-        $gemulex = Gemulex::findOrFail($id);
+        $gemulex = Gemulex32::findOrFail($id);
         return view('gemulex.show', compact('gemulex'));
 
     }
@@ -48,7 +48,7 @@ class GemulexController extends Controller
      */
     public function edit(string $id)
     {
-        $gemulex = Gemulex::findOrFail($id);
+        $gemulex = Gemulex32::findOrFail($id);
         return view('gemulex.edit', compact('gemulex'));
     }
 
@@ -57,7 +57,7 @@ class GemulexController extends Controller
      */
     public function update(Request $request, string $id)
     {
-         $gemulex = Gemulex::findOrFail($id);
+         $gemulex = Gemulex32::findOrFail($id);
         $gemulex->update($request->all());
         return redirect()->route('gemulex.index');
     }

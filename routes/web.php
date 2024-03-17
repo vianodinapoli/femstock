@@ -33,4 +33,3 @@ Route::delete(uri:'/users{user}', action: [UserController::class, 'destroy'])->n
 
 // route::resource('users', UserController::class); uma forma de resumir tudo isso numa linha só!
 Route::resource('gemulex', GemulexController::class);
-Route::delete('/gemulex/{id}', [GemulexController::class, 'destroy'])->name('gemulex.destroy');

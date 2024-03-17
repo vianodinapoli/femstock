@@ -3,7 +3,7 @@
 @section('content')
 
 
-<a href="{{'create'}}">Criar</a>
+<a href="{{'create'}}">Adicionar usuários</a>
 <hr>
 
 <h2>Users</h2>

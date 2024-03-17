@@ -72,3 +72,4 @@ class GemulexController extends Controller
         return redirect()->route('gemulex.index');
     }
 }
+

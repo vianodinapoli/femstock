@@ -15,6 +15,8 @@ use App\Http\Controllers\GemulexController;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -23,7 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get(uri:'/users', action: [UserController::class, 'index'])->name(name:'users.index');
+Route::get(uri:'/users', action: [App\Http\Controllers\UserController::class, 'index'])->name(name:'users.index');
 Route::get(uri:'/create', action: [UserController::class, 'create'])->name(name:'users.create');
 Route::post(uri:'/users', action: [UserController::class, 'store'])->name(name:'users.store');
 Route::get(uri:'/users{user}', action: [UserController::class, 'show'])->name(name:'users.show');

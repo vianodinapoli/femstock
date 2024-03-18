@@ -7892,6 +7892,13 @@ button.bg-dark:focus {
 .py-4 {
   padding-top: 1.5rem !important;
 width: 100%;
+margin: 15px;
+}
+
+#acoes{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .pr-4,

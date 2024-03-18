@@ -1,27 +1,6 @@
 @extends('layouts.app')
-
-
 @section('content')
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('Você iniciou a sessão') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
+<h2>Dashboard</h2>
 <div class="row">
 
     <!-- Earnings (Monthly) Card Example -->
@@ -31,8 +10,8 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Earnings (Monthly)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            Usuários no sistema</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{ route('users.index') }}">Ver usuários</a></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -49,8 +28,8 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Earnings (Annual)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                           PAIOL 4</div>
+                        <div class="h6 mb-0 font-weight-bold text-gray-600">Ver gemulex</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>

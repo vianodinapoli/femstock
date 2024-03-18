@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>FEM STOCK</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -17,92 +17,75 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-<link rel="stylesheet" href="{{asset('assets/auth/css/sb-admin-2.min.css')}}">
-<link rel="stylesheet" href="{{asset('assets/auth/css/sb-admin-2.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.css') }}">
 
-<script src="{{asset('assets/auth/js/sb-admin-2.js')}}"></script>
-<script src="{{asset('assets/auth/js/sb-admin-2.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.min.css') }}">
 
-{{--
-<link href="{{asset('assets/auth/css/sb-admin-2.css')}}">
-    <link href="{{asset('assets/auth/css/sb-admin-2.min.css')}}"> --}}
-
-<script src="{{asset('assets/auth/js/sb-admin-2.js')}}"></script>
-    <script src="{{asset('assets/auth/js/sb-admin-2.min.js')}}"></script>
+    <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+    <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
 
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.bundle.js.map')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.bundle.min.js.map')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.js')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.js.map')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/auth/vendor/bootstrap/js/bootstrap.min.js.map')}}"></script>
-
+    <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+    <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
 
 </head>
+
 <body id="ajust">
 
 
 
 
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav me-auto">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                </ul>
 
-                    </ul>
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ms-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @endif
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
             </div>
-        </nav>
-        <div style="display: flex">
+    </nav>
+
+    <div style="display: flex">
 
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -131,15 +114,16 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Paios
             </div>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>PAIOL 1 - BOOSTERS - CORDÃO</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -155,7 +139,25 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>PAIOL 2 - LINHA DE TIRO - DETONADORES</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>PAIOL 3 - LIGADORES - DETONADORES</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -174,7 +176,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                PAIOL 4 GEMULEX - 32,50,65,90
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -182,16 +184,50 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ 'gemulex' }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>GEMULEX DE 32</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'gemulex' }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>GEMULEX DE 50</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'gemulex' }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>GEMULEX DE 65</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'gemulex' }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>GEMULEX DE 90</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>PAIOL 5 - SOBRAS</span>
+                </a>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>PAIOL 6 - LIGADORES - DETONADORES</span>
+                </a>
+
+                <div class="sidebar-heading">
+                    ANFO
+                </div>
+
+
+                <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>DINAMITE ANFO</span></a>
             </li>
 
             <!-- Divider -->
@@ -208,16 +244,17 @@
             </div>
 
         </ul>
+
         <main class="py-4">
             @yield('content')
         </main>
-
     </div>
 
 
     </div>
 
-</div>
+    </div>
 </body>
+<script src="{{ asset('js/app.js') }}"></script>
 
 </html>

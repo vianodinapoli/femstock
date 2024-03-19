@@ -15,6 +15,6 @@
     <input type="text"  name="email" placeholder="Digite seu email">
     <input type="text"  name="password" placeholder="Digite sua senha">
 
-    <button type="submit">Criar</button>
+    <button type="submit" class=" btn btn-success">Criar</button>
 </form>
 @endsection

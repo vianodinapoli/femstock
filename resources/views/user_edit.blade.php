@@ -14,7 +14,7 @@
     <input type="text"  name="name" value="{{$user->name}}">
     <input type="text"  name="email" value="{{$user->email}}">
 
-    <button type="submit">Editar</button>
+    <button type="submit" class="btn btn-primary">Editar</button>
 </form>
 
 

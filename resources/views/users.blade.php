@@ -4,7 +4,7 @@
 
 
 
-<button type="submit" class="btn btn-dark"><a href="{{'create'}}">Adicionar usuários</a></button>
+<button type="submit" class="btn btn-success"><a href="{{'create'}}" style="color: #fff">Adicionar usuários</a></button>
 
 <hr>
 

@@ -169,6 +169,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\Admin\AdmikoServiceProvider::class,
+        Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
+
     ])->toArray(),
 
     /*
@@ -185,5 +187,9 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+
+        
+    
 
 ];

@@ -40,6 +40,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
+        notify()->success('Laravel Notify is awesome!');
+
         $created = $this->user->create([
             'name' => $request->input(key:'name'),
             'email' => $request->input(key:'email'),

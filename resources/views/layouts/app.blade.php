@@ -258,3 +258,4 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 </html>
+@include('notify::components.notify')

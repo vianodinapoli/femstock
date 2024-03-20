@@ -19,19 +19,26 @@
 
     <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/fontawesome-free/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/bootstrap/scss/_dropdown.scss') }}">
+
 
     <link rel="stylesheet" href="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/vendor/jquery/jquery.js') }}">
 
-    <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-    <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
+    @push('scripts')
+
+<script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+<script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
 
-    <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-    <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
-
+<script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+<script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
+@endpush
 
 </head>
+
+
 
 <body id="ajust">
 
@@ -39,7 +46,7 @@
 
 
     
-        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+        {{-- <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
@@ -83,7 +90,7 @@
                     @endguest
                 </ul>
             </div>
-    </nav>
+    </nav> --}}
 
     <div style="display: flex">
 
@@ -120,10 +127,10 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link collapsed" href="/users" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>PAIOL 1 - BOOSTERS - CORDÃO</span>
+                    <span>USUÁRIOS</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -254,8 +261,12 @@
     </div>
 
     </div>
+
+    @stack('scripts')
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+<script src="{{ asset('') }}"></script>
 
 </html>
 @include('notify::components.notify')
+

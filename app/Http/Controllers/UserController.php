@@ -15,7 +15,6 @@ class UserController extends Controller
     public function __construct()
     {
         $this->user = new User();
-
     }
 
     /**
@@ -24,7 +23,7 @@ class UserController extends Controller
     public function index()
     {
         $users = $this->user->all();
-        return view(view:'users', data:['users' => $users]);
+        return view(view: 'users', data: ['users' => $users]);
     }
 
     /**
@@ -44,9 +43,9 @@ class UserController extends Controller
         notify()->success('Usuário adicionado com sucesso');
 
         $created = $this->user->create([
-            'name' => $request->input(key:'name'),
-            'email' => $request->input(key:'email'),
-            'password' => password_hash($request->input(key:'password'), PASSWORD_DEFAULT),
+            'name' => $request->input(key: 'name'),
+            'email' => $request->input(key: 'email'),
+            'password' => password_hash($request->input(key: 'password'), PASSWORD_DEFAULT),
         ]);
 
         // if ($created){
@@ -54,9 +53,9 @@ class UserController extends Controller
         // }
         // return redirect()->back()->with(key:'message', value:'Erro na criação de usuário');
         return redirect()->route('users.index');
-        }
+    }
 
-        
+
 
 
     /**
@@ -64,7 +63,7 @@ class UserController extends Controller
      */
     public function show(user $user)
     {
-        return view(view:'user_show', data:['user' => $user]);
+        return view(view: 'user_show', data: ['user' => $user]);
     }
 
     /**
@@ -81,17 +80,16 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-    // $updated = $this->user->where('id', $id)->update($request->except(keys:['_token', '_method']));
-    // if ($updated){
-    //     return redirect()->back()->with(key:'message', value:'Actualizado com sucesso');
-    // }
-    notify()->success('Actualizado com sucesso com sucesso');
+        // $updated = $this->user->where('id', $id)->update($request->except(keys:['_token', '_method']));
+        // if ($updated){
+        //     return redirect()->back()->with(key:'message', value:'Actualizado com sucesso');
+        // }
+        notify()->success('Actualizado com sucesso com sucesso');
 
 
-    $user = User::findOrFail($id);
+        $user = User::findOrFail($id);
         $user->update($request->all());
-    return redirect()->route('users.index');
-
+        return redirect()->route('users.index');
     }
 
     /**
@@ -102,7 +100,7 @@ class UserController extends Controller
         notify()->success('Usuário apagado com sucesso!');
 
 
-$this ->user->where('id', $id)->delete();
-return redirect()->route(route:'users.index');
-
-    }}
+        $this->user->where('id', $id)->delete();
+        return redirect()->route(route: 'users.index');
+    }
+}

@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+@notifyCss
 
 
 <h2>Gemulex 32</h2><a style="float: right" href="{{'gemulex/create'}}">Adicionar Gemulex</a>
@@ -57,5 +57,7 @@
       @endforeach
     </tbody>
   </table>
-
+  <x-notify::notify />
+  @notifyJs
+  </body>
 @endsection

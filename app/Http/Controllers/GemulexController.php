@@ -29,6 +29,8 @@ class GemulexController extends Controller
      */
     public function store(Request $request)
     {
+        notify()->success('Gemulex adicionado com sucesso');
+
         Gemulex32::create($request->all());
         return redirect()->route('gemulex.index');
     }

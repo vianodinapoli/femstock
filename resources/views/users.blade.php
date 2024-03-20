@@ -8,8 +8,9 @@
 
 <hr>
 
-<h2>Users</h2>
+<h1 class="mb-4 mt-4">Users</h1>
 
+@notifyCss
 
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -48,5 +49,7 @@
       @endforeach
     </tbody>
   </table>
- 
+  <x-notify::notify />
+  @notifyJs
+  </body>
 @endsection

@@ -6,7 +6,6 @@
 
 @if (session()->has('message'))
 {{session()->get('message')}}
-@notifyCss
 
 @endif
 <form action="{{route('users.store')}}"  method="post">
@@ -19,8 +18,6 @@
     <button type="submit" class=" btn btn-success">Criar</button>
 </form>
 
-<x-notify::notify />
-@notifyJs
-</body>
+
 
 @endsection

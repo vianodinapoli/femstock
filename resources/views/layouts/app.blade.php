@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="{{ asset('assets/auth/vendor/jquery/jquery.js') }}">
 
     @push('scripts')
+        <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+        <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
-<script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-<script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
-
-<script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-<script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
-@endpush
+        <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
+        <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
+    @endpush
 
 </head>
 
@@ -45,8 +44,8 @@
 
 
 
-    
-        {{-- <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+
+    {{-- <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
@@ -269,4 +268,3 @@
 
 </html>
 @include('notify::components.notify')
-

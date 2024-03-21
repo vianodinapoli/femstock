@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Routes;
 use App\Http\Controllers\GemulexController;
+use App\Http\Controllers\AnfoController;
+use App\Models\Anfo;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +38,4 @@ Route::delete(uri:'/users{user}', action: [UserController::class, 'destroy'])->n
 
 // route::resource('users', UserController::class); uma forma de resumir tudo isso numa linha só!
 Route::resource('gemulex', GemulexController::class);
+Route::resource('anfo', AnfoController::class);

@@ -2,6 +2,7 @@
 
 @section('content')
 
+@notifyCss
 
 
 <button type="submit" class="btn btn-success"><a href="{{'create'}}" style="color: #fff">Adicionar usuários</a></button>
@@ -10,7 +11,6 @@
 
 <h1 class="mb-4 mt-4">Users</h1>
 
-@notifyCss
 
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

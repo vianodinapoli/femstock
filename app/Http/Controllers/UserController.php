@@ -90,6 +90,25 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->update($request->all());
         return redirect()->route('users.index');
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,' . $id,
+            'password' => 'nullable|string|min:8',
+        ]);
+    
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        
+        // Verificar se a senha foi fornecida e atualizar se necessário
+        if ($request->has('password')) {
+            $user->password = Hash::make($request->password);
+        }
+    
+        $user->save();
+
+
     }
 
     /**

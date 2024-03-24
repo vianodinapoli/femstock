@@ -13,6 +13,8 @@
     <input type="hidden" name="_method" value="PUT">
     <input type="text"  name="name" value="{{$user->name}}">
     <input type="text"  name="email" value="{{$user->email}}">
+    <input type="password" name="password" id="password" class="" value="{{ $user->password }}">
+
 
     <button type="submit" class="btn btn-primary">Editar</button>
 </form>

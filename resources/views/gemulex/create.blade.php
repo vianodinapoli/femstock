@@ -19,6 +19,6 @@
     <input type="date"  name="data_validade" placeholder="Digite a data de validade">
     <input type="number"  name="quantidade" placeholder="Digite a quantidade">
 
-    <button type="submit">Criar</button>
+    <button type="submit" class=" btn btn-success">Criar</button>
 </form>
 @endsection

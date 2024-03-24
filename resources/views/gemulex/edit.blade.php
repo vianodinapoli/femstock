@@ -19,6 +19,6 @@
     <input type="number"  name="quantidade" value="{{$gemulex->quantidade}}">
 
 
-    <button type="submit">Editar</button>
+    <button type="submit" class=" btn btn-success">Editar</button>
 </form>
 @endsection

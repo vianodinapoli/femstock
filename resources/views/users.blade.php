@@ -12,7 +12,7 @@
 <h1 class="mb-4 mt-4">Usuários</h1>
 <hr>
 
-<button type="submit" class="btn btn-success"><a href="{{'create'}}" style="color: #fff">Adicionar usuários</a></button>
+<button type="submit" class="btn btn-success"><a href="{{route('users.create')}}" style="color: #fff">Adicionar usuários</a></button>
 
 
 

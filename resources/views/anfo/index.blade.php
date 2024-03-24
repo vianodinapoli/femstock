@@ -10,7 +10,7 @@
 
 <h1 class="mb-4 mt-4">Dinamite Anfo</h1>
 
-@notifyCss
+{{-- @notifyCss --}}
 
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -41,13 +41,16 @@
           display: flex;
           justify-content: space-evenly;
           align-items: center;">
-            <a href="{{ route('anfo.edit', $anfo->id) }}">Editar</a> | 
+            {{-- <a href="{{ route('anfo.edit', $anfo->id) }}">Editar</a> --}}
+            <a href="{{ route('anfo.edit', $anfo->id) }}" class="btn btn-primary">
+              <i class="fas fa-pencil-alt"></i> Editar
+          </a> | 
             {{-- <a href="{{ route('anfos.show', $anfo->id) }}">Detalhes</a> |  --}}
             {{-- <a href="{{ route('anfos.destroy', $anfo->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}
             <form action="{{route('anfo.destroy',['anfo' => $anfo->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger">Apagar</button>
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                 </form>
           </td>
         </tr>

@@ -2,7 +2,6 @@
 
 @section('content')
 
-<a href="">Adicionar Gemulex</a>
 
 
 @if (session()->has('message'))

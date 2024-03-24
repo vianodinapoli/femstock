@@ -11,6 +11,8 @@ class AnfoController extends Controller
     {
         $anfos = Anfo::all();
         return view('anfo.index', compact('anfos'));
+
+        
     }
 
     public function create()

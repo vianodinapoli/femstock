@@ -11,8 +11,8 @@
 <form action="{{route('users.update', ['user' =>$user->id])}}" method="post">
     @csrf
     <input type="hidden" name="_method" value="PUT">
-    <input type="text"  name="name" value="{{$user->name}}">
-    <input type="text"  name="email" value="{{$user->email}}">
+    <input type="text"  name="name" value="{{$user->name}}" required>
+    <input type="text"  name="email" value="{{$user->email}}" required>
     <input type="password" name="password" id="password" class="" value="{{ $user->password }}">
 
 

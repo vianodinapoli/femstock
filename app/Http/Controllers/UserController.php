@@ -24,6 +24,10 @@ class UserController extends Controller
     {
         $users = $this->user->all();
         return view(view: 'users', data: ['users' => $users]);
+
+       
+
+        
     }
 
     /**
@@ -40,14 +44,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
-        notify()->success('Usuário adicionado com sucesso');
+       
 
         $created = $this->user->create([
             'name' => $request->input(key: 'name'),
             'email' => $request->input(key: 'email'),
             'password' => password_hash($request->input(key: 'password'), PASSWORD_DEFAULT),
         ]);
-
+        notify()->success('Usuário adicionado com sucesso');
         // if ($created){
         //     return redirect()->back()->with(key:'message', value:'Criado com sucesso');
         // }

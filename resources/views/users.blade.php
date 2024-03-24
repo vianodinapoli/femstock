@@ -1,15 +1,18 @@
 @extends('layouts.app')
+@notifyCss
 
 @section('content')
 
-@notifyCss
 
 
-<button type="submit" class="btn btn-success"><a href="{{'create'}}" style="color: #fff">Adicionar usuários</a></button>
 
+
+
+
+<h1 class="mb-4 mt-4">Usuários</h1>
 <hr>
 
-<h1 class="mb-4 mt-4">Users</h1>
+<button type="submit" class="btn btn-success"><a href="{{'create'}}" style="color: #fff">Adicionar usuários</a></button>
 
 
 
@@ -36,13 +39,17 @@
           display: flex;
           justify-content: space-evenly;
           align-items: center;">
-            <a href="{{ route('users.edit', $user->id) }}">Editar</a> | 
-            <a href="{{ route('users.show', $user->id) }}">Detalhes</a> | 
+           <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">
+            <i class="fas fa-pencil-alt"></i> 
+        </a>
+            
+             | 
+            {{-- <a href="{{ route('users.show', $user->id) }}">Detalhes</a> |  --}}
             {{-- <a href="{{ route('users.destroy', $user->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}
-            <form action="{{route('users.destroy',['user' => $user->id])}}" method="post">
+            <form class="form" action="{{route('users.destroy',['user' => $user->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger">Apagar</button>
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                 </form>
           </td>
         </tr>

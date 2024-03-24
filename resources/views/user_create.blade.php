@@ -11,9 +11,9 @@
 <form action="{{route('users.store')}}"  method="post">
     @csrf
 
-    <input type="text"  name="name" placeholder="Digite seu nome">
-    <input type="text"  name="email" placeholder="Digite seu email">
-    <input type="text"  name="password" placeholder="Digite sua senha">
+    <input type="text"  name="name" placeholder="Digite seu nome" required>
+    <input type="text"  name="email" placeholder="Digite seu email" required>
+    <input type="text"  name="password" placeholder="Digite sua senha" required>
 
     <button type="submit" class=" btn btn-success">Criar</button>
 </form>

@@ -22,8 +22,12 @@ class AnfoController extends Controller
 
     public function store(Request $request)
     {
+        notify()->success('Registado com sucesso');
+
         Anfo::create($request->all());
         return redirect()->route('anfo.index');
+
+
     }
 
     public function show($id)
@@ -40,6 +44,8 @@ class AnfoController extends Controller
 
     public function update(Request $request, $id)
     {
+        notify()->success('Actualizado com sucesso');
+
         $anfo = Anfo::findOrFail($id);
         $anfo->update($request->all());
         return redirect()->route('anfo.index');
@@ -47,6 +53,8 @@ class AnfoController extends Controller
 
     public function destroy($id)
     {
+        notify()->success('Usuário apagado com sucesso!');
+
         $anfo = Anfo::findOrFail($id);
         $anfo->delete();
         return redirect()->route('anfo.index');

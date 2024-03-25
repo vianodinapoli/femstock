@@ -7,8 +7,6 @@ use App\Http\Controllers\GemulexController;
 use App\Http\Controllers\AnfoController;
 use App\Http\Controllers\FemviaturaController;
 
-use App\Models\Anfo;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

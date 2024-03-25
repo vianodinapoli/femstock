@@ -1,12 +1,12 @@
 @extends('layouts.app')
+@notifyCss
 
 @section('content')
 
 
-{{-- @notifyCss --}}
 
 
-<h2>CCONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
+<h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
 
 <button type="submit" class="btn btn-success" ><a style="color: #fff" href="{{route('femviatura.create')}}">Adicionar Viaturas</a></button>
 
@@ -31,13 +31,13 @@
        @foreach ($femViaturas as $femviatura) 
       
         <tr>
-          <td>{{ $femviaturas->id }}</td>
-           <td>{{ $femviaturas->marca }}</td>
-          <td>{{ $femviaturas->modelo }}</td>
-          <td>{{ $femviaturas->cor }}</td>
-          <td>{{ $femviaturas->ano_fabricacao }}</td>
-          <td>{{ $femviaturas->seguro }}</td>
-          <td>{{ $femviaturas->inspecao }}</td> 
+          <td>{{ $femviatura->id }}</td>
+           <td>{{ $femviatura->marca }}</td>
+          <td>{{ $femviatura->modelo }}</td>
+          <td>{{ $femviatura->cor }}</td>
+          <td>{{ $femviatura->ano_fabricacao }}</td>
+          <td>{{ $femviatura->seguro }}</td>
+          <td>{{ $femviatura->inspecao }}</td> 
           <td><a href="{{ url('documentos/' . $femviatura->documento) }}">Download</a></td>
           
           <td style="
@@ -48,8 +48,8 @@
             <i class="fas fa-pencil-alt"></i> Editar
         </a>
              | 
-            {{-- <a href="{{ route('users.destroy', $user->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}
-            {{-- <form action="{{route('femviaturas.destroy',['gemulex' => $femviaturas->id])}}" method="post"> --}}
+            {{-- <a href="{{ route('femviatura.destroy', $femviatura->id) }}">Excluir</a> --}}
+            <form action="{{route('femviatura.destroy',['femviatura' => $femviatura->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>

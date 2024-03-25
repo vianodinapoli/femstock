@@ -8,7 +8,7 @@
 @section('content')
 <h1>Nova Viatura</h1>
 
-<form method="POST" action="{{ route('femviatura.store') }}">
+<form method="post" action="{{ route('femviatura.store') }}">
     @csrf
 
     <div class="form-group">
@@ -28,7 +28,7 @@
 
     <div class="form-group">
         <label for="ano_fabricacao">Ano de Fabricação:</label>
-        <input type="date" name="ano_fabricacao" id="ano_fabricacao" class="form-control" required>
+        <input type="number" name="ano_fabricacao" id="ano_fabricacao" class="form-control" required>
     </div>
 
     <div class="form-group">

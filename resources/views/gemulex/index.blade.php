@@ -1,9 +1,9 @@
 @extends('layouts.app')
+@notifyCss
 
 @section('content')
 
 
-{{-- @notifyCss --}}
 
 
 <h2>Gemulex 32</h2>
@@ -52,8 +52,6 @@
             <i class="fas fa-pencil-alt"></i> Editar
         </a>
              | 
-            {{-- <a href="{{ route('gemulex.show', $gemulex->id) }}">Detalhes</a> |  --}}
-            {{-- <a href="{{ route('users.destroy', $user->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">

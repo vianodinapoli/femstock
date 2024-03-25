@@ -109,6 +109,44 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+    ACESSÓRIOS
+    </div>
+    <hr class="sidebar-divider">
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="" data-toggle="collapse"
+            data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>ACESSÓRIOS</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">PAIOS 1, 2, 3, 5 e 6</h6>
+                <a class="collapse-item" href="#">1 - CORDÃO, BOOSTERS</a>
+                <a class="collapse-item" href="#">2 - DET. E LTNE</a>
+                <a class="collapse-item" href="#">3 - LIGADORES</a>
+                <a class="collapse-item" href="#">5 - SOBRAS</a>
+                <a class="collapse-item" href="#">6 - DIVERSOS</a>
+                {{-- <div class="collapse-divider"></div> --}}
+                {{-- <h6 class="collapse-header">Other Pages:</h6> --}}
+                {{-- <a class="collapse-item" href="404.html">404 Page</a> --}}
+                {{-- <a class="collapse-item" href="blank.html">Blank Page</a> --}}
+            </div>
+        </div>
+
+        {{-- <a class="nav-link collapsed" href="" data-toggle="collapse"
+            data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>DINAMITE ANCO</span>
+        </a> --}}
+    </li>
+
+    
+
+    <hr class="sidebar-divider">
+
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -120,7 +158,7 @@
                 <a class="nav-link collapsed" href="{{ route('gemulex.index') }}" data-toggle="collapse"
                     data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>GEMULEX 32</span>
+                    <span>GEMULEX</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -143,6 +181,12 @@
                 </a> --}}
             </li>
 
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+            DINAMITE ANCO
+            </div>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -151,6 +195,8 @@
                     <span>ANCO</span></a>
             </li>
 
+
+           
 
 
             <!-- Nav Item - Tables -->
@@ -169,12 +215,12 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
+            {{-- <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
                 <p class="text-center mb-2"><strong>FEM STOCK</strong> is packed with premium features, components, and
                     more!</p>
                 <a class="btn btn-success btn-sm" href="">-</a>
-            </div>
+            </div> --}}
 
         </ul>
         <!-- End of Sidebar -->

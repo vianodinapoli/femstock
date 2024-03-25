@@ -19,22 +19,24 @@ class FemviaturaController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'marca' => 'required|string|max:255',
-            'modelo' => 'required|string|max:255',
-            'cor' => 'required|string|max:255',
-            'ano_fabricacao' => 'required|integer',
-            'seguro' => 'required|date',
-            'inspecao' => 'required|date',
-            'documento' => 'required|file|mimes:pdf,docx,jpeg,png',
-        ]);
 
-        $femViatura = FemViatura::create($validatedData);
+        Femviatura::create($request->all());
+        // $validatedData = $request->validate([
+        //     'marca' => 'required|string|max:255',
+        //     'modelo' => 'required|string|max:255',
+        //     'cor' => 'required|string|max:255',
+        //     'ano_fabricacao' => 'required|integer',
+        //     'seguro' => 'required|date',
+        //     'inspecao' => 'required|date',
+        //     'documento' => 'required|file|mimes:pdf,docx,jpeg,png',
+        // ]);
 
-        if ($request->hasFile('documento')) {
-            $femViatura->documento = $request->file('documento')->store('documentos');
-            $femViatura->save();
-        }
+        // $femViatura = FemViatura::create($validatedData);
+
+        // if ($request->hasFile('documento')) {
+        //     $femViatura->documento = $request->file('documento')->store('documentos');
+        //     $femViatura->save();
+        // }
 
         return redirect()->route('femviatura.index');
     }

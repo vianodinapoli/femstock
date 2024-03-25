@@ -9507,7 +9507,7 @@ margin: 15px;
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 @media (min-width: 576px) {
@@ -10035,7 +10035,7 @@ a:focus {
 }
 
 .text-gray-900 {
-  color: #3a3b45 !important;
+  color: #ce2026 !important;
 }
 
 .icon-circle {

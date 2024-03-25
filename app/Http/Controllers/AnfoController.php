@@ -53,7 +53,7 @@ class AnfoController extends Controller
 
     public function destroy($id)
     {
-        notify()->success('Usuário apagado com sucesso!');
+        notify()->success('Apagado com sucesso!');
 
         $anfo = Anfo::findOrFail($id);
         $anfo->delete();

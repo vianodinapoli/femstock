@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Routes;
 use App\Http\Controllers\GemulexController;
 use App\Http\Controllers\AnfoController;
+use App\Http\Controllers\FemviaturaController;
+
 use App\Models\Anfo;
 
 /*
@@ -39,3 +41,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 route::resource('users', UserController::class); 
 Route::resource('gemulex', GemulexController::class);
 Route::resource('anfo', AnfoController::class);
+
+Route::resource('femviatura', FemviaturaController::class);

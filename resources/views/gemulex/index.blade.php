@@ -22,10 +22,10 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Diametro</th>
+        <th>Diametro/Mais info</th>
         <th>Data recebido</th>
         <th>Número de lote</th>
-        <th>Data de prodção</th>
+        <th>Data de produção</th>
         <th>Data de validade</th>
         <th>Quantidade</th>
 
@@ -51,11 +51,11 @@
            <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-primary">
             <i class="fas fa-pencil-alt"></i> Editar
         </a>
-             | 
+             
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>DELETE</button>
                 </form>
           </td>
         </tr>

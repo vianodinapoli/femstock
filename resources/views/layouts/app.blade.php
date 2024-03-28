@@ -27,14 +27,19 @@
     <link rel="stylesheet" href="{{ asset('assets/auth/vendor/jquery/jquery.js') }}">
 
 
-    @push('scripts')
-        <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-        <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
+  
+    
 
+        <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script> 
+         <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
 
-        <script src="{{ asset('assets/auth/js/sb-admin-2.js') }}"></script>
-        <script src="{{ asset('assets/auth/js/sb-admin-2.min.js') }}"></script>
-    @endpush
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+        
+    
 </head>
 
 
@@ -99,93 +104,66 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Empresas:</h6>
-                        <a class="collapse-item" href="{{route('femviatura.index')}}">FEM</a>
-                        <a class="collapse-item" href="">Africola</a>
-                        <a class="collapse-item" href="">Bymoze</a>
-                        <a class="collapse-item" href="">Pavymoze</a>
+                        <a class="collapse-item" href="{{ route('femviatura.index') }}">FEM</a>
+                        <a class="collapse-item" href="">AFRICOLA</a>
+                        <a class="collapse-item" href="">BYMOZE</a>
+                        <a class="collapse-item" href="">PAVYMOZE</a>
                     </div>
                 </div>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
- <!-- Heading -->
- <div class="sidebar-heading">
-    ACESSÓRIOS
-    </div>
-    <hr class="sidebar-divider">
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="" data-toggle="collapse"
-            data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>ACESSÓRIOS</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">PAIOS 1, 2, 3, 5 e 6</h6>
-                <a class="collapse-item" href="#">1 - CORDÃO, BOOSTERS</a>
-                <a class="collapse-item" href="#">2 - DET. E LTNE</a>
-                <a class="collapse-item" href="#">3 - LIGADORES</a>
-                <a class="collapse-item" href="#">5 - SOBRAS</a>
-                <a class="collapse-item" href="#">6 - DIVERSOS</a>
-                {{-- <div class="collapse-divider"></div> --}}
-                {{-- <h6 class="collapse-header">Other Pages:</h6> --}}
-                {{-- <a class="collapse-item" href="404.html">404 Page</a> --}}
-                {{-- <a class="collapse-item" href="blank.html">Blank Page</a> --}}
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                ACESSÓRIOS DE TIRO
             </div>
-        </div>
 
-        {{-- <a class="nav-link collapsed" href="" data-toggle="collapse"
-            data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>DINAMITE ANCO</span>
-        </a> --}}
-    </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>ACESSÓRIOS</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">PAIOS 1, 2, 3, 5 e 6</h6>
+                        <a class="collapse-item" href="#">1 - CORDÃO, BOOSTERS</a>
+                        <a class="collapse-item" href="#">2 - DET. E LTNE</a>
+                        <a class="collapse-item" href="#">3 - LIGADORES</a>
+                        <a class="collapse-item" href="#">5 - SOBRAS</a>
+                        <a class="collapse-item" href="#">6 - DIVERSOS</a>
 
-    
+                    </div>
+                </div>
 
-    <hr class="sidebar-divider">
+            </li>
+
+
+
+            <hr class="sidebar-divider">
+
+
 
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Paiol 4 - GEMULEX
+                GEMULEX - 32, 50, 65, 90
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('gemulex.index') }}" data-toggle="collapse"
-                    data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>GEMULEX</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Referências de Gemulex</h6>
-                        <a class="collapse-item" href="{{ route('gemulex.index') }}">Gemulex S100 32</a>
-                        <a class="collapse-item" href="#">Gemulex S100 50</a>
-                        <a class="collapse-item" href="#">Gemulex S100 65</a>
-                        <a class="collapse-item" href="#">Gemulex S100 90</a>
-                        {{-- <div class="collapse-divider"></div> --}}
-                        {{-- <h6 class="collapse-header">Other Pages:</h6> --}}
-                        {{-- <a class="collapse-item" href="404.html">404 Page</a> --}}
-                        {{-- <a class="collapse-item" href="blank.html">Blank Page</a> --}}
-                    </div>
-                </div>
-
-                {{-- <a class="nav-link collapsed" href="" data-toggle="collapse"
-                    data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>DINAMITE ANCO</span>
-                </a> --}}
+                <a class="nav-link" href="{{ route('gemulex.index') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>GEMULEX</span></a>
             </li>
+
 
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-            DINAMITE ANCO
+                DINAMITE ANCO
             </div>
 
             <!-- Nav Item - Charts -->
@@ -196,7 +174,7 @@
             </li>
 
 
-           
+
 
 
             <!-- Nav Item - Tables -->
@@ -210,9 +188,9 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            {{-- <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+            </div> --}}
 
             <!-- Sidebar Message -->
             {{-- <div class="sidebar-card d-none d-lg-flex">
@@ -235,7 +213,7 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <h6
-                        style="    background-color: red;
+                        style="background-color: red;
                     color: #fff;
                     font-size: 13px;
                     margin: 10px;
@@ -264,11 +242,15 @@
                                     @endif
                                 @else
                                     <li class="nav-item dropdown">
+
                                         <a style="color: #4b4b4b" id="navbarDropdown" class="nav-link dropdown-toggle"
                                             href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" v-pre>
+                                            aria-expanded="false" v-pre> <i
+                                                class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             {{ Auth::user()->name }}
+
                                         </a>
+
 
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -310,7 +292,13 @@
 
             </div>
 
-
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Todos direitos reservados &copy; FEM 2024</span>
+                    </div>
+                </div>
+            </footer>
         </div>
 
     </div>
@@ -325,16 +313,20 @@
     </div>
     <!-- Footer -->
 
-    @stack('scripts')
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('assets/auth/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/auth/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/auth/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-<script src="{{ asset('assets/auth/vendor/datatables/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('assets/auth/js/demo/datatables-demo.js') }}"></script>
+
 
 </html>
+@stack('scripts')
+<script src="{{ asset('assets/auth/vendor/datatables/jquery.dataTables.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('assets/auth/js/demo/datatables-demo.js') }}"></script>
+        <script src="{{ asset('assets/auth/js/demo/chart-area-demo.js') }}"></script>
+        <script src="{{ asset('assets/auth/js/demo/chart-bar-demo.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/chart.js/Chart.bundle.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/chart.js/Chart.js') }}"></script>
+        <script src="{{ asset('assets/auth/vendor/chart.js/Chart.min.js') }}"></script>
+        
 @include('notify::components.notify')

@@ -4,13 +4,17 @@
 @section('content')
 
 
+<div class="tabTitle">
 
 
 <h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
+<hr>
 
-<button type="submit" class="btn btn-success" ><a style="color: #fff" href="{{route('femviatura.create')}}">Adicionar Viaturas</a></button>
-
-
+<a href="{{ route('femviatura.create') }}" class="btn btn-primary">
+  <i class="fas fa-pen-alt"></i> Adicionar Viatura
+</a>
+</div>
+<div class="card shadow mb-4">
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <thead>
@@ -44,7 +48,7 @@
           display: flex;
           justify-content: space-evenly;
           align-items: center;">
-           {{-- <a href="{{ route('femviaturas.edit', $femviaturas->id) }}" class="btn btn-primary"> --}}
+           <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
             <i class="fas fa-pencil-alt"></i> Editar
         </a>
              | 
@@ -59,6 +63,7 @@
        @endforeach 
     </tbody>
   </table>
+</div>
   <x-notify::notify />
   @notifyJs
   </body>

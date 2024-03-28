@@ -1,10 +1,9 @@
-@extends('layouts.auth')
-
-@section('content')
-
+@guest
 
 <div class="container">
 
+    <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/auth/css/sb-admin-2.css') }}">
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -85,4 +84,4 @@
     </div>
 
 </div>
-@endsection
+@endguest

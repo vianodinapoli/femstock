@@ -3,15 +3,18 @@
 
 @section('content')
 
+<div class="tabTitle">
 
+  <h2 class="mb-4 mt-4">Dinamite Anfo</h2>
 
-<button type="submit" class="btn btn-success"><a href="{{route('anfo.create')}}" style="color: #fff">Adicionar Anfo</a></button>
+  <hr>
 
-<hr>
+<a href="{{ route('anfo.create') }}" class="btn btn-primary">
+  <i class="fas fa-pen-alt"></i> Adicionar Anfo
+</a>
+</div>
 
-<h1 class="mb-4 mt-4">Dinamite Anfo</h1>
-
-{{-- @notifyCss --}}
+<div class="card shadow mb-4">
 
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -32,7 +35,7 @@
         <tr>
           <td>{{ $anfo->id }}</td>
           <td>{{ $anfo->descricao }}</td>
-          <td>{{ $anfo->data_producao }}</td>
+          <td>{{ $anfo->data_producao}}</td>
           <td>{{ $anfo->numero_lote }}</td>
           <td>{{ $anfo->data_validade }}</td>
           <td>{{ $anfo->quantidade }}</td>
@@ -41,11 +44,11 @@
           <td style="
           display: flex;
           justify-content: space-evenly;
-          align-items: center;">
+          align-items: flex-start;">
             {{-- <a href="{{ route('anfo.edit', $anfo->id) }}">Editar</a> --}}
             <a href="{{ route('anfo.edit', $anfo->id) }}" class="btn btn-primary">
-              <i class="fas fa-pencil-alt"></i> Editar
-          </a> | 
+              <i class="fas fa-pencil-alt"></i> 
+          </a> 
             {{-- <a href="{{ route('anfos.show', $anfo->id) }}">Detalhes</a> |  --}}
             {{-- <a href="{{ route('anfos.destroy', $anfo->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}
             <form action="{{route('anfo.destroy',['anfo' => $anfo->id])}}" method="post">
@@ -58,6 +61,7 @@
       @endforeach
     </tbody>
   </table>
+</div>
   <x-notify::notify />
   @notifyJs
   </body>

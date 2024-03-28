@@ -1980,6 +1980,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+  /* width: 50%; */
 }
 
 .form-text {
@@ -7892,7 +7893,17 @@ button.bg-dark:focus {
 .py-4 {
   padding-top: 1.5rem !important;
 width: 100%;
-margin: 15px;
+}
+
+.tabTitle{
+  margin-bottom:10px;
+
+  
+}
+
+.editTitle{
+  color: #18181c;
+  
 }
 
 #acoes{
@@ -9507,7 +9518,7 @@ margin: 15px;
 }
 
 .text-center {
-  text-align: left !important;
+  text-align: center !important;
 }
 
 @media (min-width: 576px) {
@@ -9819,8 +9830,8 @@ a:focus {
 .container-md,
 .container-lg,
 .container-xl {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  /* padding-left: 1.5rem; */
+  /* padding-right: 1.5rem; */
 }
 
 .scroll-to-top {
@@ -11288,3 +11299,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 
+.gemulex{
+  text-align: right;
+    margin-bottom: 10px;
+}

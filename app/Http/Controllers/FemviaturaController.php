@@ -51,31 +51,36 @@ class FemviaturaController extends Controller
         return view('femviatura.edit', compact('femViatura'));
     }
 
-    public function update(Request $request, FemViatura $femViatura)
+    public function update(Request $request, string $id)
     {
-        $validatedData = $request->validate([
-            'marca' => 'required|string|max:255',
-            'modelo' => 'required|string|max:255',
-            'cor' => 'required|string|max:255',
-            'ano_fabricacao' => 'required|integer',
-            'seguro' => 'required|boolean',
-            'inspecao' => 'required|date',
-            'documento' => 'nullable|file|mimes:pdf,docx,jpeg,png',
-        ]);
+        // $validatedData = $request->validate([
+        //     'marca' => 'required|string|max:255',
+        //     'modelo' => 'required|string|max:255',
+        //     'cor' => 'required|string|max:255',
+        //     'ano_fabricacao' => 'required|integer',
+        //     'seguro' => 'required|boolean',
+        //     'inspecao' => 'required|date',
+        //     'documento' => 'nullable|file|mimes:pdf,docx,jpeg,png',
+        // ]);
 
-        $femViatura->update($validatedData);
+        // $femViatura->update($validatedData);
 
-        if ($request->hasFile('documento')) {
-            $femViatura->documento = $request->file('documento')->store('documentos');
-            $femViatura->save();
-        }
+        // if ($request->hasFile('documento')) {
+        //     $femViatura->documento = $request->file('documento')->store('documentos');
+        //     $femViatura->save();
+        // }
+        $femviatura = femviatura::findOrFail($id);
+        $femviatura->update($request->all());
 
-        return redirect()->route('femviaturas.index');
+        return redirect()->route ('femviatura.index');
+        // return redirect()('femviatura.index', with('femViatura', $femViatura));
+
     }
 
-    public function destroy(FemViatura $femViatura)
+    public function destroy(string $id)
     {
-        $femViatura->delete();
+        $Femviatura = Femviatura::findOrFail($id);
+        $Femviatura->delete();
         return redirect()->route('femviatura.index');
     }
 }

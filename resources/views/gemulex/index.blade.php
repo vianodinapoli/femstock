@@ -5,18 +5,40 @@
 
 
 
-
+<div class="tabTitle">
 <h2>Gemulex 32</h2>
+<hr>
 
-<button type="submit" class="btn btn-success" ><a style="color: #fff" href="{{'gemulex/create'}}">Adicionar Gemulex</a></button>
+<a href="{{ route('gemulex.create') }}" class="btn btn-primary">
+  <i class="fas fa-pen-alt"></i>Adicionar Gemulex de 32
+</a>
 
-{{-- <ul>
-    @foreach ($gemulexes as $gemulex )
-    @csrf
-    <li>{{ $gemulex->id}} - {{ $gemulex->diametro}} - {{ $gemulex->data_recebido}} - {{ $gemulex->numero_lote}} - {{ $gemulex->data_producao}} - {{ $gemulex->data_validade}} - {{ $gemulex->quantidade}}- {{ $gemulex->updated_at}}  | <a href="{{route('gemulex.edit',['gemulex'=>$gemulex->id])}}">Editar</a> | | <a href="{{route('gemulex.show', ['gemulex'=>$gemulex->id])}}">Show</a>
+</div>
 
-    @endforeach
-</ul> --}}
+<div class="gemulex">
+  <a href="#" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50">
+        50
+    </span>
+    <span class="text">Gemulex</span>
+  </a>
+  <a href="#" class="btn btn-secondary btn-icon-split">
+    <span class="icon text-white-50">
+        65
+    </span>
+    <span class="text">Gemulex</span>
+  </a>
+
+ <a href="#" class="btn btn-success btn-icon-split">
+  <span class="icon text-white-50">
+      90
+  </span>
+  <span class="text">Gemulex</span>
+</a>
+
+</div>
+
+<div class="card shadow mb-4">
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <thead>
@@ -47,21 +69,22 @@
           <td style="
           display: flex;
           justify-content: space-evenly;
-          align-items: center;">
+          align-items: flex-start;">
            <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i> Editar
+            <i class="fas fa-pencil-alt"></i> 
         </a>
              
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>DELETE</button>
+                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                 </form>
           </td>
         </tr>
       @endforeach
     </tbody>
   </table>
+</div>
   <x-notify::notify />
   @notifyJs
   </body>

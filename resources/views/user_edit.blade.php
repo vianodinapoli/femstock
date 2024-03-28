@@ -2,18 +2,39 @@
 
 @section('content')
 
-<h2>Edit</h2>
 
 @if (session()->has('message'))
 {{session()->get('message')}}
 
 @endif
+
+<a href="#" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50">
+        <i class="fas fa-pencil-alt"></i> 
+    </span>
+    <span class="text">Editar - {{$user->name}}</span>
+</a>
+<hr>
+
 <form action="{{route('users.update', ['user' =>$user->id])}}" method="post">
     @csrf
-    <input type="hidden" name="_method" value="PUT">
-    <input type="text"  name="name" value="{{$user->name}}" required>
-    <input type="text"  name="email" value="{{$user->email}}" required>
-    <input type="password" name="password" id="password" class="" value="{{ $user->password }}">
+     <input type="hidden" name="_method" value="PUT">
+
+    <div class="form-group">
+        <label class="m-0 font-weight-bold text-black" for="name">Nome:</label>
+        <input type="text"  name="name" value="{{$user->name}}" class="form-control" required>
+    </div>
+
+   
+    <div class="form-group">
+        <label class="m-0 font-weight-bold text-black" for="email">Email:</label>
+        <input type="text"  name="email" value="{{$user->email}}" required class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label  class="m-0 font-weight-bold text-black" for="password">Senha:</label>
+        <input type="password" name="password" id="password" value="{{ $user->password }}" class="form-control" required>
+    </div>
 
 
     <button type="submit" class="btn btn-primary">Editar</button>

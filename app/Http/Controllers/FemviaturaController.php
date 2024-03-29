@@ -19,8 +19,30 @@ class FemviaturaController extends Controller
 
     public function store(Request $request)
     {
+        // $request->validate([
+            
+        //     'documento' => 'required|image|mimes:pdf,jpeg,png,jpg,gif,svg|max:20480',
+        // ]);
 
-        Femviatura::create($request->all());
+
+        $input = $request->all();
+  
+        if ($image = $request->file('documento')) {
+            $destinationPath = 'documentos/';
+            $documento = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $documento);
+            $input['documento'] = "$documento";
+        }
+    
+    //    try {
+    
+    //     //code...
+    //    } catch (\Throwable $th) {
+
+    
+    //     //throw $th;
+    //    }
+        Femviatura::create($input);
         // $validatedData = $request->validate([
         //     'marca' => 'required|string|max:255',
         //     'modelo' => 'required|string|max:255',
@@ -46,12 +68,15 @@ class FemviaturaController extends Controller
         return view('femviaturas.show', compact('femViatura'));
     }
 
-    public function edit(FemViatura $femViatura)
+    public function edit($id)
     {
+        $femViatura = Femviatura::findOrFail($id);
+        // ->get();
+        // dd($femViatura);
         return view('femviatura.edit', compact('femViatura'));
     }
 
-    public function update(Request $request, string $id)
+    public function update(Request $request, Femviatura $femviatura)
     {
         // $validatedData = $request->validate([
         //     'marca' => 'required|string|max:255',
@@ -62,18 +87,23 @@ class FemviaturaController extends Controller
         //     'inspecao' => 'required|date',
         //     'documento' => 'nullable|file|mimes:pdf,docx,jpeg,png',
         // ]);
-
+        // dd($femviatura->modelo);
+ $femviatura->update($request->all());
         // $femViatura->update($validatedData);
 
         // if ($request->hasFile('documento')) {
         //     $femViatura->documento = $request->file('documento')->store('documentos');
         //     $femViatura->save();
         // }
-        $femviatura = femviatura::findOrFail($id);
-        $femviatura->update($request->all());
+        // $femviatura = femviatura::findOrFail();
+        // $femviatura->update($request->all());
 
-        return redirect()->route ('femviatura.index');
+        // return redirect()->route ('femviatura.index');
         // return redirect()('femviatura.index', with('femViatura', $femViatura));
+
+        // dd($request, $id);
+
+        return "Actualizado";
 
     }
 

@@ -16,9 +16,9 @@
 </a>
 <hr>
 
-<form action="{{route('femviatura.update', $femViatura->id)}}" method="POST">
+<form action="{{route('femviatura.update', ['femviatura' => $femViatura->id])}}" method="post" enctype="multipart/form-data">
     @csrf
-    
+    @method('PUT')
     <input type="hidden" name="_method" value="PUT">
 
     <div class="form-group">
@@ -28,7 +28,7 @@
 
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="modelo">Modelo:</label>
-        <input type="date" name="modelo" value="{{$femViatura->modelo}}" class="form-control" required>
+        <input type="text" name="modelo" value="{{$femViatura->modelo}}" class="form-control" required>
     </div>
 
     <div class="form-group">
@@ -50,10 +50,12 @@
         <label class="m-0 font-weight-bold text-black" for="inspecao">Inspeção:</label>
         <input type="date" name="inspecao" value="{{$femViatura->inspecao}}" class="form-control" required>
     </div>
-
+    <div class="col-md-6">
+        <input type="file" name="image" class="form-control">
+    </div>
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="documento">Documento:</label>
-        <input type="file" name="documento" value="{{$femViatura->inspecao}}" class="form-control" required>
+        <input type="file" name="documento" value="{{$femViatura->inspecao}}" class="form-control" >
     </div>
 
 

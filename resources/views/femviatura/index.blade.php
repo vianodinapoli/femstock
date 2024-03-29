@@ -42,7 +42,10 @@
           <td>{{ $femviatura->ano_fabricacao }}</td>
           <td>{{ $femviatura->seguro }}</td>
           <td>{{ $femviatura->inspecao }}</td> 
-          <td><a href="{{ url('documentos/' . $femviatura->documento) }}">Download</a></td>
+          <td>
+            <a href="{{ url('documentos/' . $femviatura->documento) }}">
+              
+              Download</a></td>
           
           <td style="
           display: flex;

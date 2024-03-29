@@ -15,7 +15,7 @@
 </a>
 <hr>
 
-<form method="post" action="{{ route('femviatura.store') }}">
+<form method="post" action="{{ route('femviatura.store') }}" enctype="multipart/form-data">
     @csrf
 
     <div class="form-group">

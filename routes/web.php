@@ -40,5 +40,5 @@ route::resource('users', UserController::class);
 Route::resource('gemulex', GemulexController::class);
 Route::resource('anfo', AnfoController::class);
 
-Route::resource( FemviaturaController::class);
+Route::resource('femviatura', FemviaturaController::class);
 

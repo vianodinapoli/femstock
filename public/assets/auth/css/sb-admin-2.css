@@ -10874,7 +10874,7 @@ a:focus {
 
 @media (min-width: 768px) {
   .chart-pie {
-    height: calc(20rem - 43px) !important;
+    height: calc(25rem - 43px) !important;
   }
 }
 
@@ -11302,4 +11302,10 @@ body.sidebar-toggled footer.sticky-footer {
 .gemulex{
   text-align: right;
     margin-bottom: 10px;
+}
+
+.acao{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }

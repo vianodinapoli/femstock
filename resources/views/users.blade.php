@@ -7,10 +7,11 @@
         <hr>
 
         <a href="{{ route('users.create') }}" class="btn btn-primary">
-            <i class="fas fa-pen-alt"></i> Adicionar usuários
+            <i class="fas fa-pen-alt"></i><i class="bi bi-arrow-return-left"></i> Adicionar usuários
         </a>
     </div>
     <div class="card shadow mb-4">
+        
 
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
@@ -37,18 +38,19 @@
           justify-content: space-evenly;
           align-items: flex-start;">
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">
-                                <i class="fas fa-pencil-alt"></i>
+                                <i class="fas fa-pencil-alt"></i>Editar
                             </a>
                             <form class="form" action="{{ route('users.destroy', ['user' => $user->id]) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>Apagar</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+    
     </div>
     <x-notify::notify />
     @notifyJs

@@ -98,7 +98,7 @@
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Lotes disponíveis de Gemulex</h6>
-                <div class="dropdown no-arrow">
+                {{-- <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -111,12 +111,12 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <!-- Card Body -->
             <div class="card-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
         </div>
@@ -129,7 +129,7 @@
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Lotes disponíveis de Anfo</h6>
-                <div class="dropdown no-arrow">
+                {{-- <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -142,14 +142,14 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <!-- Card Body -->
-            <div class="card-body">
+            <div class="card-body card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
+                    <canvas id="doughnutCanvas"></canvas>
                 </div>
-                <div class="mt-4 text-center small">
+                {{-- <div class="mt-4 text-center small">
                     <span class="mr-2">
                         <i class="fas fa-circle text-primary"></i> 23022024
                     </span>
@@ -159,11 +159,54 @@
                     <span class="mr-2">
                         <i class="fas fa-circle text-info"></i> 03032024
                     </span>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
 </div>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['230424', '280424', '230124', '230224', '230223', '240224'],
+        datasets: [{
+          label: 'Gemulex de 65',
+          data: [500, 400, 350, 400, 100, 250],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    const doughnutData = {
+    labels: ['03042024', '0302024', '3002024'], // Replace with your actual labels
+    datasets: [{
+    data: [13, 500, 314], // Replace with your actual data values
+    }],
+};
+
+const doughnutChart = new Chart('doughnutCanvas', {
+    type: 'doughnut',
+    data: doughnutData,
+    options: {},
+});
+
+
+
+  </script>
 
 
 @endsection

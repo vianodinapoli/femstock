@@ -50,11 +50,11 @@
               Download</img>
              --}}
 
-             <a href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
+             <a class="btn btn-primary" href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
               <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
-              <a href="{{ route('femviatura.create') }}" class="btn btn-primary">
+              
                 <i class="fas fa-download"></i> Baixar PDF
-              </a>
+              
           </a>
             </td>
               

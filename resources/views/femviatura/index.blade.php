@@ -20,7 +20,7 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Marca</th>
+        <th>Marca e Matrícula</th>
         <th>Modelo </th>
         <th>Cor</th>
         <th>Ano de Fabrico</th>
@@ -43,9 +43,19 @@
           <td>{{ $femviatura->seguro }}</td>
           <td>{{ $femviatura->inspecao }}</td> 
           <td>
-            <a href="{{ url('documentos/' . $femviatura->documento) }}">
+            {{-- <a href="{{ url('documentos/' . $femviatura->documento) }}"> --}}
+
+              {{-- <img src="/documentos/{{ $femviatura->documento }}" width="100px">
               
-              Download</a></td>
+              Download</img>
+             --}}
+
+             <a href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
+              <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
+              Baixar Documento
+          </a>
+            </td>
+              
           
           <td style="
           display: flex;
@@ -54,7 +64,9 @@
            <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
             <i class="fas fa-pencil-alt"></i> Editar
         </a>
-             | 
+
+        
+             
             {{-- <a href="{{ route('femviatura.destroy', $femviatura->id) }}">Excluir</a> --}}
             <form action="{{route('femviatura.destroy',['femviatura' => $femviatura->id])}}" method="post">
                 @csrf

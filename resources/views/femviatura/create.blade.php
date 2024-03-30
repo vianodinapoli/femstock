@@ -19,7 +19,7 @@
     @csrf
 
     <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="marca">Marca:</label>
+        <label class="m-0 font-weight-bold text-black" for="marca">Marca e Matrícula:</label>
         <input type="text" name="marca" id="marca" class="form-control" required>
     </div>
 

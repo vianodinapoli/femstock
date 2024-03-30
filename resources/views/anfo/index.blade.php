@@ -8,6 +8,7 @@
   <h2 class="mb-4 mt-4">Dinamite Anfo</h2>
 
   <hr>
+  <a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 <a href="{{ route('anfo.create') }}" class="btn btn-primary">
   <i class="fas fa-pen-alt"></i> Adicionar Anfo

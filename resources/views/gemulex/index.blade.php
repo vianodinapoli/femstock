@@ -8,6 +8,7 @@
 <div class="tabTitle">
 <h2>Gemulex 32</h2>
 <hr>
+<a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 <a href="{{ route('gemulex.create') }}" class="btn btn-primary">
   <i class="fas fa-pen-alt"></i>Adicionar Gemulex de 32

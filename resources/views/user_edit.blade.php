@@ -7,6 +7,7 @@
 {{session()->get('message')}}
 
 @endif
+<a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 <a href="#" class="btn btn-primary btn-icon-split">
     <span class="icon text-white-50">

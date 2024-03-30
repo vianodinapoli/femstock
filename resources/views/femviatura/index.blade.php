@@ -9,7 +9,7 @@
 
 <h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
 <hr>
-
+<a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 <a href="{{ route('femviatura.create') }}" class="btn btn-primary">
   <i class="fas fa-pen-alt"></i> Adicionar Viatura
 </a>
@@ -42,7 +42,7 @@
           <td>{{ $femviatura->ano_fabricacao }}</td>
           <td>{{ $femviatura->seguro }}</td>
           <td>{{ $femviatura->inspecao }}</td> 
-          <td>
+          <td >
             {{-- <a href="{{ url('documentos/' . $femviatura->documento) }}"> --}}
 
               {{-- <img src="/documentos/{{ $femviatura->documento }}" width="100px">
@@ -52,17 +52,16 @@
 
              <a href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
               <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
-              Baixar Documento
+              <a href="{{ route('femviatura.create') }}" class="btn btn-primary">
+                <i class="fas fa-download"></i> Baixar PDF
+              </a>
           </a>
             </td>
               
           
-          <td style="
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;">
+          <td class="acao">
            <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i> Editar
+            <i class="fas fa-pencil-alt"></i>   
         </a>
 
         

@@ -5,9 +5,10 @@
     <div class="tabTitle">
         <h2 class="">Usuários</h2>
         <hr>
+        <a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
         <a href="{{ route('users.create') }}" class="btn btn-primary">
-            <i class="fas fa-pen-alt"></i><i class="bi bi-arrow-return-left"></i> Adicionar usuários
+            <i class="fas fa-pen-alt"></i> Adicionar usuários
         </a>
     </div>
     <div class="card shadow mb-4">

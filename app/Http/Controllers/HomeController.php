@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Gemulex32;
+USE App\Models\Anfo;
 use DB;
 use Illuminate\Http\Request;
 
@@ -45,9 +46,18 @@ class HomeController extends Controller
     
     $quantidade = $dadosPorLote->pluck('quantidade');
 
+    //ANFO
+
+    $dadosPorLoteAnfo = Anfo::select('numero_lote', DB::raw('sum(quantidade) as quantidade'))
+    ->groupBy('numero_lote')
+    ->get();
+
+$labelsAnfo = $dadosPorLoteAnfo->pluck('numero_lote');
+$quantidadeAnfo = $dadosPorLoteAnfo->pluck('quantidade');
+
     
 
-    return view('home', compact('labels', 'quantidade', 'dadosPorLote'));
+    return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo'));
 
 
     }

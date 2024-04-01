@@ -178,6 +178,22 @@
                     data: {!! json_encode($quantidade) !!},
                     backgroundColor: 'rgba(54, 162, 235)', // Use uma cor padrão
                     borderColor: 'rgba(4, 22, 235, 0.2)',
+                    backgroundColor: [
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(54, 162, 235, 0.8)',
+            'rgba(255, 206, 86, 0.8)',
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+            'rgba(255, 159, 64, 0.8)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
                     borderWidth: 2
                 }]
 
@@ -196,38 +212,47 @@
 
 
 
-
         const doughnutData = {
-            labels: ['03042024', '0302024', '3002024'], // Replace with your actual labels
-            datasets: [{
-                data: [13, 500, 314], // Replace with your actual data values
+    labels: {!! json_encode($labelsAnfo) !!},
+    datasets: [{
+        data: {!! json_encode($quantidadeAnfo) !!},
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(54, 162, 235, 0.8)',
+            'rgba(255, 206, 86, 0.8)',
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+            'rgba(255, 159, 64, 0.8)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 2
+    }]
+};
 
-                backgroundColor: [
-                                    'rgba(255, 99, 132)',
-                                    'rgba(54, 162, 235)',
-                                    'rgba(255, 206, 86)',
-                                    'rgba(75, 192, 192)',
-                                    'rgba(153, 102, 255)',
-                                    'rgba(255, 159, 64)'
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 12, 0.1)',
-                                    'rgba(54, 162, 25, 0.1)',
-                                    'rgba(255, 206, 826, 0.1)',
-                                    'rgba(75, 192, 192, 0.1)',
-                                    'rgba(153, 102, 255, 0.1)',
-                                    'rgba(255, 159, 64, 0.1)'
-                                ],
-                                borderWidth: 2
+const doughnutOptions = {
+    responsive: true,
+    maintainAspectRatio: false, // Permitir que o gráfico redimensione sem manter a proporção
+    legend: {
+        position: 'right', // Posição da legenda
+        labels: {
+            fontColor: '#333', // Cor do texto da legenda
+            fontSize: 12 // Tamanho do texto da legenda
+        }
+    }
+};
 
+const doughnutChart = new Chart('doughnutCanvas', {
+    type: 'doughnut',
+    data: doughnutData,
+    options: doughnutOptions
+});
 
-            }],
-        };
-
-        const doughnutChart = new Chart('doughnutCanvas', {
-            type: 'doughnut',
-            data: doughnutData,
-            options: {},
-        });
     </script>
 @endsection

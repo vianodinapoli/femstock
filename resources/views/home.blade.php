@@ -73,7 +73,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             MAIS ACESSÓRIOS DE TIRO</div>
-                        <div class="h6 mb-0 font-weight-bold text-gray-800"><a href="{{route('anfo.index')}}">VER MAIS ACESSÓRIOS</a></div>
+                        <div class="h6 mb-0 font-weight-bold text-gray-800"><a href="">VER MAIS ACESSÓRIOS</a></div>
                     </div>
                     <div class="col-auto">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -166,32 +166,61 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
   <script>
-    const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById('myChart').getContext('2d');
   
     new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['230424', '280424', '230124', '230224', '230223', '240224'],
-        datasets: [{
-          label: 'Gemulex de 65',
-          data: [500, 400, 350, 400, 100, 250],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+  type: 'bar',
+  data: {
+    labels: {!! json_encode($labels) !!},
+    datasets: [{
+      label: 'Gemulex de 65',
+      data: {!! json_encode($quantidade) !!},
+      backgroundColor: 'rgba(54, 162, 235)', // Use uma cor padrão
+      borderColor: 'rgba(4, 22, 235, 0.2)',
+      borderWidth: 2
+    }]
+    
+  },
+  options: {
+  scales: {
+    y: {
+      type: 'linear', // Tipo da escala Y
+      min: 0, // Valor mínimo
+      max: 1200, // Valor máximo
+    }
+  }
+}
+});
+
+
+
+    
 
     const doughnutData = {
     labels: ['03042024', '0302024', '3002024'], // Replace with your actual labels
     datasets: [{
     data: [13, 500, 314], // Replace with your actual data values
-    }],
+    
+    // backgroundColor: [
+    //                     'rgba(255, 99, 132)',
+    //                     'rgba(54, 162, 235)',
+    //                     'rgba(255, 206, 86)',
+    //                     'rgba(75, 192, 192)',
+    //                     'rgba(153, 102, 255)',
+    //                     'rgba(255, 159, 64)'
+    //                 ],
+    //                 borderColor: [
+    //                     'rgba(255, 99, 12, 1)',
+    //                     'rgba(54, 162, 25, 1)',
+    //                     'rgba(255, 206, 826, 1)',
+    //                     'rgba(75, 192, 192, 1)',
+    //                     'rgba(153, 102, 255, 1)',
+    //                     'rgba(255, 159, 64, 1)'
+    //                 ],
+    //                 borderWidth: 2
+            
+
+}],
 };
 
 const doughnutChart = new Chart('doughnutCanvas', {
@@ -203,6 +232,8 @@ const doughnutChart = new Chart('doughnutCanvas', {
 
 
   </script>
+
+
 
 
 @endsection

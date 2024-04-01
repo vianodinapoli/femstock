@@ -31,3 +31,6 @@ return new class extends Migration
         Schema::dropIfExists('gemulex32s');
     }
 };
+
+
+

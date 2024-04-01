@@ -19,26 +19,19 @@ use App\Http\Controllers\FemviaturaController;
 */
 
 
-
 Route::get('/', function () {
     return view('auth.login');
-});
+})->name('login'); // Name the login route for redirection
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Apply auth middleware to all routes except login and registration
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get(uri:'/users', action: [App\Http\Controllers\UserController::class, 'index'])->name(name:'users.index');
-// Route::get(uri:'/create', action: [UserController::class, 'create'])->name(name:'users.create');
-// Route::post(uri:'/users', action: [UserController::class, 'store'])->name(name:'users.store');
-// Route::get(uri:'/users{user}', action: [UserController::class, 'show'])->name(name:'users.show');
-// Route::get(uri:'/users{user}/edit', action: [UserController::class, 'edit'])->name(name:'users.edit');
-// Route::put(uri:'/users{user}', action: [UserController::class, 'update'])->name(name:'users.update');
-// Route::delete(uri:'/users{user}', action: [UserController::class, 'destroy'])->name(name:'users.destroy');
-
-route::resource('users', UserController::class); 
-Route::resource('gemulex', GemulexController::class);
-Route::resource('anfo', AnfoController::class);
-
-Route::resource('femviatura', FemviaturaController::class);
-
+    // Resource routes for users, gemulex, anfo, and femviatura
+    route::resource('users', UserController::class);
+    Route::resource('gemulex', GemulexController::class);
+    Route::resource('anfo', AnfoController::class);
+    Route::resource('femviatura', FemviaturaController::class);
+});

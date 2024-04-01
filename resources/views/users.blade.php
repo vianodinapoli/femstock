@@ -13,6 +13,9 @@
     </div>
     <div class="card shadow mb-4">
         
+ <section id="loading">
+    <div id="loading-content"></div>
+  </section>
 
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
@@ -39,12 +42,12 @@
           justify-content: space-evenly;
           align-items: flex-start;">
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">
-                                <i class="fas fa-pencil-alt"></i>Editar
+                                <i class="fas fa-pencil-alt"></i>
                             </a>
                             <form class="form" action="{{ route('users.destroy', ['user' => $user->id]) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>Apagar</button>
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                             </form>
                         </td>
                     </tr>
@@ -55,5 +58,9 @@
     </div>
     <x-notify::notify />
     @notifyJs
+
+
     </body>
+
+    
 @endsection

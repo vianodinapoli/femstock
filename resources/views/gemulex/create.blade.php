@@ -23,7 +23,7 @@
 
 
     <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="diametro">Diametro:</label>
+        <label class="m-0 font-weight-bold text-black" for="diametro">Descrição/Diametro:</label>
         <input type="text" name="diametro" id="diametro" class="form-control" required>
     </div>
 
@@ -33,8 +33,8 @@
     </div>
 
     <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="numero_lote">Número de lote:</label>
-        <input type="text" name="numero_lote" id="data_validade" class="form-control" required>
+        <label class="m-0 font-weight-bold text-black" for="numero_lote">Referência/Número de lote:</label>
+        <input type="text" name="numero_lote" placeholder=" Exemplo 32/2306023" id="data_validade" class="form-control" required>
     </div>
 
 

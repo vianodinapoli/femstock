@@ -6,38 +6,16 @@
 
 
 <div class="tabTitle">
-<h2>Gemulex 32</h2>
+<h2>PAIOL 04 DE GEMULEX</h2>
 <hr>
 <a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 <a href="{{ route('gemulex.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i>Adicionar Gemulex de 32
+  <i class="fas fa-pen-alt"></i>Adicionar Gemulex de 32, 50, 65 e 90
 </a>
 
 </div>
 
-<div class="gemulex">
-  <a href="#" class="btn btn-primary btn-icon-split">
-    <span class="icon text-white-50">
-        50
-    </span>
-    <span class="text">Gemulex</span>
-  </a>
-  <a href="#" class="btn btn-secondary btn-icon-split">
-    <span class="icon text-white-50">
-        65
-    </span>
-    <span class="text">Gemulex</span>
-  </a>
-
- <a href="#" class="btn btn-success btn-icon-split">
-  <span class="icon text-white-50">
-      90
-  </span>
-  <span class="text">Gemulex</span>
-</a>
-
-</div>
 
 <div class="card shadow mb-4">
 
@@ -45,9 +23,9 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Diametro/Mais info</th>
+        <th>Descição/Diametro</th>
         <th>Data recebido</th>
-        <th>Número de lote</th>
+        <th>Referência/Número de lote:</th>
         <th>Data de produção</th>
         <th>Data de validade</th>
         <th>Quantidade</th>

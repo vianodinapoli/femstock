@@ -23,7 +23,7 @@
     <input type="hidden" name="_method" value="PUT">
 
     <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="descricao">Diametro:</label>
+        <label class="m-0 font-weight-bold text-black" for="descricao">Descrição/Diametro:</label>
         <input type="text" name="diametro" value="{{$gemulex->diametro}}" class="form-control" required>
     </div>
 
@@ -33,7 +33,7 @@
     </div>
 
     <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="numero_lote">Número de Lote:</label>
+        <label class="m-0 font-weight-bold text-black" for="numero_lote">Referência/Número de lote:</label>
         <input type="text" name="numero_lote" value="{{$gemulex->numero_lote}}" class="form-control" required>
     </div>
 

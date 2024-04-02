@@ -9,7 +9,7 @@
 
 <h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
 <hr>
-<a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+<a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 <a href="{{ route('femviatura.create') }}" class="btn btn-primary">
   <i class="fas fa-pen-alt"></i> Adicionar Viatura
 </a>

@@ -113,9 +113,8 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="myChart"></canvas>
-                    </div>
+                    <canvas id="myChart"></canvas>
+                  
                 </div>
             </div>
         </div>
@@ -240,10 +239,10 @@ const doughnutOptions = {
     responsive: true,
     maintainAspectRatio: false, // Permitir que o gráfico redimensione sem manter a proporção
     legend: {
-        position: 'right', // Posição da legenda
+        position: 'bottom', // Posição da legenda
         labels: {
             fontColor: '#333', // Cor do texto da legenda
-            fontSize: 12 // Tamanho do texto da legenda
+            fontSize: 10 // Tamanho do texto da legenda
         }
     }
 };

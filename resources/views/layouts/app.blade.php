@@ -131,7 +131,7 @@
                         <a class="collapse-item" href="{{route('paiolone.index')}}">1 - CORDÃO, BOOSTERS</a>
                         <a class="collapse-item" href="{{route('paioltwo.index')}}">2 - DET. E LTNE</a>
                         <a class="collapse-item" href="{{route('paiolthree.index')}}">3 - LIGADORES</a>
-                        <a class="collapse-item" href="#">5 - SOBRAS</a>
+                        <a class="collapse-item" href="{{route('paiolsobras.index')}}">5 - SOBRAS</a>
                         <a class="collapse-item" href="#">6 - DIVERSOS</a>
 
                     </div>

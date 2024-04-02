@@ -9,6 +9,7 @@ use App\Http\Controllers\FemviaturaController;
 use App\Http\Controllers\PaioloneController;
 use App\Http\Controllers\PaioltwoController;
 use App\Http\Controllers\PaiolthreeController;
+use App\Http\Controllers\PaiolsobrasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('paiolone', PaioloneController::class);
     Route::resource('paioltwo', PaioltwoController::class);
     Route::resource('paiolthree', PaiolthreeController::class);
+
+Route::resource('paiolsobras', PaiolsobrasController::class);
 
 });

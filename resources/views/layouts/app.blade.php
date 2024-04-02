@@ -129,7 +129,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">PAIOS 1, 2, 3, 5 e 6</h6>
                         <a class="collapse-item" href="{{route('paiolone.index')}}">1 - CORDÃO, BOOSTERS</a>
-                        <a class="collapse-item" href="#">2 - DET. E LTNE</a>
+                        <a class="collapse-item" href="{{route('paioltwo.index')}}">2 - DET. E LTNE</a>
                         <a class="collapse-item" href="#">3 - LIGADORES</a>
                         <a class="collapse-item" href="#">5 - SOBRAS</a>
                         <a class="collapse-item" href="#">6 - DIVERSOS</a>

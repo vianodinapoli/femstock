@@ -7,7 +7,8 @@ use App\Http\Controllers\GemulexController;
 use App\Http\Controllers\AnfoController;
 use App\Http\Controllers\FemviaturaController;
 use App\Http\Controllers\PaioloneController;
-use App\Models\Paiolone;
+use App\Http\Controllers\PaioltwoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('anfo', AnfoController::class);
     Route::resource('femviatura', FemviaturaController::class);
     Route::resource('paiolone', PaioloneController::class);
-
+    Route::resource('paioltwo', PaioltwoController::class);
 });

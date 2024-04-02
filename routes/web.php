@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Routes;
 use App\Http\Controllers\GemulexController;
 use App\Http\Controllers\AnfoController;
 use App\Http\Controllers\FemviaturaController;
+use App\Http\Controllers\PaioloneController;
+use App\Models\Paiolone;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +36,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('gemulex', GemulexController::class);
     Route::resource('anfo', AnfoController::class);
     Route::resource('femviatura', FemviaturaController::class);
+    Route::resource('paiolone', PaioloneController::class);
+
 });

@@ -116,7 +116,38 @@
                     <canvas id="myChart"></canvas>
                   
                 </div>
+
+<div class="gemulex" >
+    <a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+      <span class="icon text-white-50">
+          Caixas de 32
+      </span>
+      <span class="text">{{$quantidadeOne}}</span>
+    </a>
+    <a href="#" class="btn btn-danger btn-icon-split" style="margin-bottom: 10px">
+      <span class="icon text-white-50">
+          Caixas de 50
+      </span>
+      <span class="text">{{$quantidadeTwo}}</span>
+    </a>
+    
+    <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
+      <span class="icon text-white-50">
+          Caixas de 65
+      </span>
+      <span class="text">{{$quantidadeSum}}</span>
+    </a>
+    <a href="#" class="btn btn-info btn-icon-split" style="margin-bottom: 10px">
+      <span class="icon text-white-50">
+          Caixas de 90
+      </span>
+      <span class="text">{{$quantidadeFour}}</span>
+    </a>
+    
+    
+  </div>
             </div>
+
         </div>
 
         <!-- Pie Chart -->

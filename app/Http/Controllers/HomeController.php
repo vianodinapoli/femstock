@@ -36,6 +36,24 @@ class HomeController extends Controller
 
         // return view('home', compact('gemulex32s', 'lotes'));
 
+        $quantidadeOne = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%32X270%')
+        ->sum('quantidade');
+        $gemulexes = Gemulex32::all();
+
+        $quantidadeTwo = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%50X550%')
+        ->sum('quantidade');
+        $gemulexes = Gemulex32::all();
+
+        $quantidadeSum = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%65X550%')
+        ->sum('quantidade');
+
+        $quantidadeFour = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%90X550%')
+        ->sum('quantidade');
+        $gemulexes = Gemulex32::all();
 
         $dadosPorLote = Gemulex32::select('numero_lote', DB::raw('sum(quantidade) as quantidade'))
         
@@ -57,7 +75,7 @@ $quantidadeAnfo = $dadosPorLoteAnfo->pluck('quantidade');
 
     
 
-    return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo'));
+    return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo', 'gemulexes', 'quantidadeSum', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
 
 
     }

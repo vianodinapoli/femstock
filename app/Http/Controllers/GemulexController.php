@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Models\Gemulex32;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,32 @@ class GemulexController extends Controller
      */
     public function index()
     {
+
+        // $quantidadeSum = DB::table('gemulex32s')->sum('quantidade')->where('diametro', 'like', '%65X550%')->sum('quantidade');
+        // return view('gemulex.index', compact('gemulexes', 'quantidadeSum'));
+
+
+        $quantidadeOne = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%32X270%')
+        ->sum('quantidade');
         $gemulexes = Gemulex32::all();
-        return view('gemulex.index', compact('gemulexes'));
+
+        $quantidadeTwo = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%50X550%')
+        ->sum('quantidade');
+        $gemulexes = Gemulex32::all();
+
+        $quantidadeSum = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%65X550%')
+        ->sum('quantidade');
+
+        $quantidadeFour = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%90X550%')
+        ->sum('quantidade');
+        $gemulexes = Gemulex32::all();
+
+
+    return view('gemulex.index', compact('gemulexes', 'quantidadeSum', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
     }
 
     /**

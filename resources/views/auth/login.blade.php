@@ -17,7 +17,7 @@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">BEM VINDO AO FEM STOCK!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">BEM VINDO(A)</h1>
                                     <img src="{{ asset('assets/auth/img/logo FEM.jpg') }}" alt="Logo da Minha Empresa" style="width: 80%; margin-right: 40px;">
                                 </div>
                                 <hr>

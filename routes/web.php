@@ -10,6 +10,8 @@ use App\Http\Controllers\PaioloneController;
 use App\Http\Controllers\PaioltwoController;
 use App\Http\Controllers\PaiolthreeController;
 use App\Http\Controllers\PaiolsobrasController;
+use App\Http\Controllers\ExtintorController;
+use App\Models\Extintor;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +45,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('paiolthree', PaiolthreeController::class);
 
 Route::resource('paiolsobras', PaiolsobrasController::class);
+
+Route::resource('extintor', ExtintorController::class);
 
 });

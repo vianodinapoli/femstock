@@ -1,19 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Anfo;
 use Illuminate\Http\Request;
 use DB;
+
 class AnfoController extends Controller
 {
     public function index()
     {
-                $quantidadeAnfos = DB::table('anfos')->sum('quantidade');
+        $quantidadeAnfos = DB::table('anfos')->sum('quantidade');
 
         $anfos = Anfo::all();
         return view('anfo.index', compact('anfos', 'quantidadeAnfos'));
-
-        
     }
 
     public function create()
@@ -27,8 +27,6 @@ class AnfoController extends Controller
 
         Anfo::create($request->all());
         return redirect()->route('anfo.index');
-
-
     }
 
     public function show($id)

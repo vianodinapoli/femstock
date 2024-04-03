@@ -21,11 +21,11 @@
       <tr>
         <th>#</th>
         <th>Numero ou descrição</th>
-        <th>agente </th>
-        <th>peso</th>
-        <th>localizacao</th>
-        <th>verificado</th>
-        <th>proxima_ver</th>
+        <th>Agente </th>
+        <th>Peso</th>
+        <th>Localização</th>
+        <th>Verificado em</th>
+        <th>Proxima verificação</th>
 
         <th>Ações</th>
       </tr>

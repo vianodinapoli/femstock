@@ -15,8 +15,8 @@
 </a>
 
 </div>
-<div class="gemulex" >
-  <a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+<div class="gemulex" style="text-align:right;" >
+  <a  class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 32
     </span>

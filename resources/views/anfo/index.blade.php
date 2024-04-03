@@ -14,7 +14,14 @@
   <i class="fas fa-pen-alt"></i> Adicionar Anfo
 </a>
 </div>
-
+<div style="  text-align: right;">
+<a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+  <span class="icon text-white-50">
+      Total de Anfo
+  </span>
+  <span class="text">{{$quantidadeAnfos}}</span>
+</a>
+</div>
 <div class="card shadow mb-4">
 
 

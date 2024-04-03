@@ -30,6 +30,7 @@ class HomeController extends Controller
         
         $gemulex32s = DB::table('gemulex32s')->count();
 
+
         // $lotes = Gemulex32::select('numero_lote', DB::raw('count(*) as quantidade'))
         // ->groupBy('numero_lote')
         // ->get();
@@ -73,9 +74,11 @@ class HomeController extends Controller
 $labelsAnfo = $dadosPorLoteAnfo->pluck('numero_lote');
 $quantidadeAnfo = $dadosPorLoteAnfo->pluck('quantidade');
 
+$quantidadeAnfos = DB::table('anfos')->sum('quantidade');
+
     
 
-    return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo', 'gemulexes', 'quantidadeSum', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
+    return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo', 'gemulexes', 'quantidadeSum', 'quantidadeAnfos', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
 
 
     }

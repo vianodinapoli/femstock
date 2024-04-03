@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 use App\Models\Anfo;
 use Illuminate\Http\Request;
-
+use DB;
 class AnfoController extends Controller
 {
     public function index()
     {
+                $quantidadeAnfos = DB::table('anfos')->sum('quantidade');
+
         $anfos = Anfo::all();
-        return view('anfo.index', compact('anfos'));
+        return view('anfo.index', compact('anfos', 'quantidadeAnfos'));
 
         
     }

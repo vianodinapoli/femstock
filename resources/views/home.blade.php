@@ -96,6 +96,7 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Lotes disponíveis de Gemulex</h6>
+                    
                     {{-- <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -118,26 +119,26 @@
                 </div>
 
 <div class="gemulex" >
-    <a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+    <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
           Caixas de 32
       </span>
       <span class="text">{{$quantidadeOne}}</span>
     </a>
-    <a href="#" class="btn btn-danger btn-icon-split" style="margin-bottom: 10px">
+    <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
           Caixas de 50
       </span>
       <span class="text">{{$quantidadeTwo}}</span>
     </a>
     
-    <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
+    <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
           Caixas de 65
       </span>
       <span class="text">{{$quantidadeSum}}</span>
     </a>
-    <a href="#" class="btn btn-info btn-icon-split" style="margin-bottom: 10px">
+    <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
           Caixas de 90
       </span>
@@ -188,8 +189,17 @@
                     </span>
                 </div> --}}
                 </div>
+                <div style="  text-align: center; margin-top: 10px;">
+                    <a  class="btn btn-info btn-icon-split" style="margin-bottom: 10px">
+                      <span class="icon text-white-50">
+                          Total de Anfo
+                      </span>
+                      <span class="text">{{$quantidadeAnfos}}</span>
+                    </a>
+                    </div>
             </div>
         </div>
+        
     </div>
 
 

@@ -11,7 +11,7 @@
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 <a href="{{ route('paioltwo.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i>Adicionar Material
+  <i class="fa fa-plus"></i>Adicionar Material
 </a>
 
 </div>
@@ -50,7 +50,7 @@
           justify-content: space-evenly;
           align-items: flex-start;">
            <a href="{{ route('paioltwo.edit', $paioltwo->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i> 
+            <i class="fa-regular fa-pen-to-square"></i> 
         </a>
              
             <form action="{{route('paioltwo.destroy',['paioltwo' => $paioltwo->id])}}" method="post">

@@ -10,8 +10,8 @@
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('gemulex.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i>Adicionar Gemulex de 32, 50, 65 e 90
+<a href="{{ route('gemulex.create') }}" class="btn btn-success">
+  <i class="fa fa-plus"></i>Adicionar Gemulex de 32, 50, 65 e 90
 </a>
 
 </div>
@@ -77,7 +77,7 @@
           justify-content: space-evenly;
           align-items: flex-start;">
            <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i> 
+            <i class="fa-regular fa-pen-to-square"></i> 
         </a>
              
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">

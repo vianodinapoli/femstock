@@ -7,11 +7,11 @@
 <div class="tabTitle">
 
 
-<h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
+<h4>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h4>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
-<a href="{{ route('femviatura.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i> Adicionar Viatura
+<a href="{{ route('femviatura.create') }}" class="btn btn-success">
+  <i class="fa fa-plus"></i> Adicionar Viatura
 </a>
 </div>
 <div class="card shadow mb-4">
@@ -50,10 +50,10 @@
               Download</img>
              --}}
 
-             <a class="btn btn-primary" href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
+             <a class="btn btn-secondary" href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
               <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
               
-                <i class="fas fa-download"></i> Baixar PDF
+                <i class="fa fa-file"></i> Baixar PDF
               
           </a>
             </td>
@@ -61,7 +61,7 @@
           
           <td class="acao">
            <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i>   
+            <i class="fa-regular fa-pen-to-square"></i>   
         </a>
 
         

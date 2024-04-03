@@ -7,8 +7,8 @@
         <hr>
         <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-        <a href="{{ route('users.create') }}" class="btn btn-primary">
-            <i class="fas fa-pen-alt"></i> Adicionar usuários
+        <a href="{{ route('users.create') }}" class="btn btn-success">
+            <i class="fa fa-plus"></i> Adicionar usuários
         </a>
     </div>
     <div class="card shadow mb-4">
@@ -42,7 +42,7 @@
           justify-content: space-evenly;
           align-items: flex-start;">
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">
-                                <i class="fas fa-pencil-alt"></i>
+                                <i class="fa-regular fa-pen-to-square"></i>
                             </a>
                             <form class="form" action="{{ route('users.destroy', ['user' => $user->id]) }}" method="post">
                                 @csrf

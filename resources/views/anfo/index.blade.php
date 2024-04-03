@@ -10,8 +10,8 @@
   <hr>
   <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('anfo.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i> Adicionar Anfo
+<a href="{{ route('anfo.create') }}" class="btn btn-success">
+  <i class="fa fa-plus"></i> Adicionar Anfo
 </a>
 </div>
 <div style="  text-align: right;">
@@ -55,7 +55,7 @@
           align-items: flex-start;">
             {{-- <a href="{{ route('anfo.edit', $anfo->id) }}">Editar</a> --}}
             <a href="{{ route('anfo.edit', $anfo->id) }}" class="btn btn-primary">
-              <i class="fas fa-pencil-alt"></i> 
+              <i class="fa-regular fa-pen-to-square"></i> 
           </a> 
             {{-- <a href="{{ route('anfos.show', $anfo->id) }}">Detalhes</a> |  --}}
             {{-- <a href="{{ route('anfos.destroy', $anfo->id) }}" onclick="event.preventDefault(); confirm('Deseja realmente excluir este usuário?') && this.submit();">Excluir</a> --}}

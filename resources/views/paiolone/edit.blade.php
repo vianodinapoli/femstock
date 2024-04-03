@@ -12,7 +12,7 @@
 
 <a href="#" class="btn btn-primary btn-icon-split">
     <span class="icon text-white-50">
-        <i class="fas fa-pencil-alt"></i> 
+        <i class="fa-regular fa-pen-to-square"></i> 
     </span>
     <span class="text">Editar - {{$paiolone->descricao}}</span>
 </a>

@@ -7,11 +7,11 @@
 <div class="tabTitle">
 
 
-<h2>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h2>
+<h2>CONTROLE DE VALIDADE DE EXTINTORES - FEM</h2>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
-<a href="{{ route('extintor.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i> Adicionar Extintor
+<a href="{{ route('extintor.create') }}" class="btn btn-success">
+  <i class="fa fa-plus"></i> Adicionar Extintor
 </a>
 </div>
 <div class="card shadow mb-4">
@@ -46,16 +46,14 @@
           
           <td class="acao">
            <a href="{{ route('extintor.edit', $extintor->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i>   
+            <i class="fa-regular fa-pen-to-square"></i>   
         </a>
 
-        
-             
             {{-- <a href="{{ route('extintor.destroy', $extintor->id) }}">Excluir</a> --}}
             <form action="{{route('extintor.destroy',['extintor' => $extintor->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </form>
           </td>
         </tr>

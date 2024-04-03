@@ -10,8 +10,8 @@
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('paiolone.create') }}" class="btn btn-primary">
-  <i class="fas fa-pen-alt"></i>Adicionar Material
+<a href="{{ route('paiolone.create') }}" class="btn btn-success">
+  <i class="fa fa-plus"></i>Adicionar Material
 </a>
 
 </div>
@@ -50,7 +50,7 @@
           justify-content: space-evenly;
           align-items: flex-start;">
            <a href="{{ route('paiolone.edit', $paiolone->id) }}" class="btn btn-primary">
-            <i class="fas fa-pencil-alt"></i> 
+            <i class="fa-regular fa-pen-to-square"></i> 
         </a>
              
             <form action="{{route('paiolone.destroy',['paiolone' => $paiolone->id])}}" method="post">

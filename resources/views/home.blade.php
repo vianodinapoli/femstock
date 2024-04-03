@@ -11,7 +11,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Usuários no sistema</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a
+                            <div class="h6 mb-0 font-weight-bold text-gray-800"><a
                                     href="{{ route('users.index') }}">USUÁRIOS</a></div>
                         </div>
                         <div class="col-auto">
@@ -31,7 +31,7 @@
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 PAIOL 4</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-600"><a
+                            <div class="h6 mb-0 font-weight-bold text-gray-600"><a
                                     href="{{ route('gemulex.index') }}">GEMULEX</a></div>
                         </div>
                         <div class="col-auto">
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                           
                         </div>
                     </div>
                 </div>
@@ -121,26 +121,26 @@
 <div class="gemulex" >
     <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
-          Caixas de 32
+          32X270
       </span>
       <span class="text">{{$quantidadeOne}}</span>
     </a>
     <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
-          Caixas de 50
+          50X550
       </span>
       <span class="text">{{$quantidadeTwo}}</span>
     </a>
     
     <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
-          Caixas de 65
+          65X550
       </span>
       <span class="text">{{$quantidadeSum}}</span>
     </a>
     <a  class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
       <span class="icon text-white-50">
-          Caixas de 90
+         90X550
       </span>
       <span class="text">{{$quantidadeFour}}</span>
     </a>

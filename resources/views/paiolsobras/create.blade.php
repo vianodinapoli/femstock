@@ -8,7 +8,7 @@
 {{session()->get('message')}}
 
 @endif
-<a href="{{ route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+<a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
 
 <a href="#" class="btn btn-secondary btn-icon-split">

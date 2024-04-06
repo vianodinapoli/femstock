@@ -235,18 +235,30 @@
                         datasets: [{
                             label: 'Gemulex',
                             data: {!! json_encode($quantidade) !!},
-                            backgroundColor: [ // Array for multiple bar colors
-                                'rgba(255, 99, 132, 0.8)',
-                                'rgba(54, 162, 235, 0.8)',
-                                'rgba(255, 206, 86, 0.8)',
-                                // ...(add more colors if needed)
-                            ],
-                            borderColor: [ // Array for matching border colors
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                // ...(add more colors if needed)
-                            ],
+                            backgroundColor: [
+        'rgba(255, 99, 132, 0.8)',  // Red
+        'rgba(54, 162, 235, 0.8)',  // Blue
+        'rgba(255, 206, 86, 0.8)',  // Yellow
+        'rgba(75, 192, 192, 0.8)',  // Teal
+        'rgba(153, 102, 255, 0.8)',  // Purple
+        'rgba(255, 159, 64, 0.8)',  // Orange
+        'rgba(144, 122, 146, 0.8)',  // Dusty purple
+        'rgba(247, 189, 33, 0.8)',  // Peach
+        'rgba(34, 181, 204, 0.8)',  // Turquoise
+        'rgba(204, 0, 0, 0.8)',    // Dark red
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(144, 122, 146, 1)',
+        'rgba(247, 189, 33, 1)',
+        'rgba(34, 181, 204, 1)',
+        'rgba(204, 0, 0, 1)',
+      ],
                             borderWidth: 2
                         }]
                     },
@@ -267,17 +279,29 @@
                     datasets: [{
                         data: {!! json_encode($quantidadeAnfo) !!},
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.8)',
-                            'rgba(54, 162, 235, 0.8)',
-                            'rgba(255, 206, 86, 0.8)',
-                            // ...(add more colors if needed)
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            // ...(add more colors if needed)
-                        ],
+        'rgba(255, 99, 132, 0.8)',  // Red
+        'rgba(54, 162, 235, 0.8)',  // Blue
+        'rgba(255, 206, 86, 0.8)',  // Yellow
+        'rgba(75, 192, 192, 0.8)',  // Teal
+        'rgba(153, 102, 255, 0.8)',  // Purple
+        'rgba(255, 159, 64, 0.8)',  // Orange
+        'rgba(144, 122, 146, 0.8)',  // Dusty purple
+        'rgba(247, 189, 33, 0.8)',  // Peach
+        'rgba(34, 181, 204, 0.8)',  // Turquoise
+        'rgba(204, 0, 0, 0.8)',    // Dark red
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(144, 122, 146, 1)',
+        'rgba(247, 189, 33, 1)',
+        'rgba(34, 181, 204, 1)',
+        'rgba(204, 0, 0, 1)',
+      ],
                         borderWidth: 2
                     }]
                 };
@@ -313,12 +337,30 @@
                         datasets: [{
                             label: 'Sobras',
                             data: quantidadeSobras,
-                            backgroundColor: 'rgba(25, 9, 12, 0.2)',
-
-
-
-
-                            borderColor: 'rgba(255, 99, 132, 1)',
+                            backgroundColor: [
+        'rgba(255, 99, 132, 0.8)',  // Red
+        'rgba(54, 162, 235, 0.8)',  // Blue
+        'rgba(255, 206, 86, 0.8)',  // Yellow
+        'rgba(75, 192, 192, 0.8)',  // Teal
+        'rgba(153, 102, 255, 0.8)',  // Purple
+        'rgba(255, 159, 64, 0.8)',  // Orange
+        'rgba(144, 122, 146, 0.8)',  // Dusty purple
+        'rgba(247, 189, 33, 0.8)',  // Peach
+        'rgba(34, 181, 204, 0.8)',  // Turquoise
+        'rgba(204, 0, 0, 0.8)',    // Dark red
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(144, 122, 146, 1)',
+        'rgba(247, 189, 33, 1)',
+        'rgba(34, 181, 204, 1)',
+        'rgba(204, 0, 0, 1)',
+      ],
                             borderWidth: 1
                         }]
                     },

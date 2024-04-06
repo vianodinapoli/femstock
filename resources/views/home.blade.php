@@ -91,7 +91,7 @@
     <div class="row">
 
         <!-- Area Chart -->
-        <div class="col-xl-8 col-lg-7">
+        <div class="col-xl-8 col-lg-7" id="myChartCard">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -105,7 +105,7 @@
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                             aria-labelledby="dropdownMenuLink">
                             <div class="dropdown-header"></div>
-                            <a class="dropdown-item" href="#">Ocultar gráfico</a>
+                            <a class="dropdown-item" onclick="ocultarGrafico()">Ocultar gráfico</a>
                             {{-- <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a> --}}
@@ -190,7 +190,7 @@
             </div>
         </div>
 
-        <div class="col-xl-8 col-lg-7">
+        <div class="col-xl-8 col-lg-7" >
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -334,6 +334,9 @@
                 });
 
 
+                function ocultarGrafico() {
+  document.getElementById('myChartCard').style.display = 'none';
+}
 
                 
             </script>

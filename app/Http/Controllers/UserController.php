@@ -43,7 +43,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
+      
        
 
         $created = $this->user->create([

@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="marca">Número do Extintor:</label>
-        <input type="text" name="numero" id="numero" class="form-control" required>
+        <input type="number" name="numero" id="numero" class="form-control" required>
     </div>
 
     <div class="form-group">
@@ -31,12 +31,12 @@
 
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="cor">Peso:</label>
-        <input type="text" name="peso" id="peso" class="form-control" required>
+        <input type="number" name="peso" id="peso" class="form-control" required>
     </div>
 
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="ano_fabricacao">Localização:</label>
-        <input type="number" name="localizacao" id="localizacao" class="form-control" required>
+        <input type="text" name="localizacao" id="localizacao" class="form-control" required>
     </div>
 
     <div class="form-group">

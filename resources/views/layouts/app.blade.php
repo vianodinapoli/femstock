@@ -336,6 +336,9 @@
       $('.sidebar .collapse').collapse('hide');
     };
   });
+
+
+  
 </script>
 
 

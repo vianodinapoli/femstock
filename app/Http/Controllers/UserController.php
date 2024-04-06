@@ -120,6 +120,7 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
+        
         notify()->success('Usuário apagado com sucesso!');
 
 

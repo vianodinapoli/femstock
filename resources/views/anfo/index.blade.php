@@ -64,7 +64,7 @@
             <form action="{{route('anfo.destroy',['anfo' => $anfo->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+<button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="fas fa-trash"></i></button>
                 </form>
           </td>
         </tr>
@@ -75,4 +75,26 @@
   <x-notify::notify />
   @notifyJs
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<script type="text/javascript">
+ 
+     $('.show_confirm').click(function(event) {
+          var form =  $(this).closest("form");
+          var name = $(this).data("name");
+          event.preventDefault();
+          swal({
+              title: `Tem a certeza de que pretende apagar?`,
+              text: "Se apagar isto, desaparecerá para sempre.",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              form.submit();
+            }
+          });
+      });
+    </script>
+
 @endsection

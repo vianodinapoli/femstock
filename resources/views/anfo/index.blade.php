@@ -5,16 +5,18 @@
 
 <div class="tabTitle">
 
-  <h2 class="mb-4 mt-4">Dinamite Anfo</h2>
+  <h2 class="mb-4 mt-4">DINAMITE ANFO</h2>
 
   <hr>
   <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('anfo.create') }}" class="btn btn-success">
+<a href="{{ route('anfo.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i> Adicionar Anfo
 </a>
 </div>
-<div style="  text-align: right;">
+<hr>
+
+<div style="  text-align: left;">
 <a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
   <span class="icon text-white-50">
       Total de Anfo

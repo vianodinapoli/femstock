@@ -36,6 +36,6 @@
     
 
 
-    <button type="submit" class=" btn btn-success">Criar</button>
+    <button type="submit" class=" btn btn-success mb-20 mb-20 float-right">Criar</button>
 </form>
 @endsection

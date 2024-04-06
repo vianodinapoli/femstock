@@ -10,12 +10,13 @@
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('paiolone.create') }}" class="btn btn-success">
+<a href="{{ route('paiolone.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i>Adicionar Material
 </a>
 
 </div>
 
+<hr>
 
 <div class="card shadow mb-4">
 

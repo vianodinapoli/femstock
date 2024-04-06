@@ -65,6 +65,6 @@
 
 
 
-    <button type="submit" class=" btn btn-success">Editar</button>
+    <button type="submit" class=" btn btn-success mb-20 mb-20 float-right">Editar</button>
 </form>
 @endsection

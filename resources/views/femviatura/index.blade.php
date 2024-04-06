@@ -7,13 +7,15 @@
 <div class="tabTitle">
 
 
-<h4>CONTROLE DE DOCUMENTOS DE VIATURAS - FEM</h4>
+<h4>Controle de documentos de Viaturas</h4>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
-<a href="{{ route('femviatura.create') }}" class="btn btn-success">
+<a href="{{ route('femviatura.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i> Adicionar Viatura
 </a>
 </div>
+<hr>
+
 <div class="card shadow mb-4">
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

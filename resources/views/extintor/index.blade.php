@@ -7,13 +7,15 @@
 <div class="tabTitle">
 
 
-<h2>CONTROLE DE VALIDADE DE EXTINTORES - FEM</h2>
+<h2>Controle de validade de extintores - FEM</h2>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
-<a href="{{ route('extintor.create') }}" class="btn btn-success">
+<a href="{{ route('extintor.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i> Adicionar Extintor
 </a>
 </div>
+<hr>
+
 <div class="card shadow mb-4">
 
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

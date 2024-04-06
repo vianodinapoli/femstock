@@ -10,12 +10,14 @@
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('gemulex.create') }}" class="btn btn-success">
+<a href="{{ route('gemulex.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i>Adicionar Gemulex de 32, 50, 65 e 90
 </a>
 
 </div>
-<div class="gemulex" style="text-align:right;" >
+<hr>
+
+<div class="gemulex" style="text-align:left;" >
   <a  class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 32

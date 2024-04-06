@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Models\Gemulex32;
 use App\Models\Anfo;
-use DB;
+use App\Models\Paiolsobras;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,42 +33,15 @@ class HomeController extends Controller
         $gemulex32s = DB::table('gemulex32s')->count();
 
 
-        // $lotes = Gemulex32::select('numero_lote', DB::raw('count(*) as quantidade'))
-        // ->groupBy('numero_lote')
-        // ->get();
-
-        // return view('home', compact('gemulex32s', 'lotes'));
-
-        $quantidadeOne = DB::table('gemulex32s')
-            ->where('diametro', 'like', '%32X270%')
-            ->sum('quantidade');
-        $gemulexes = Gemulex32::all();
-
-        $quantidadeTwo = DB::table('gemulex32s')
-            ->where('diametro', 'like', '%50X550%')
-            ->sum('quantidade');
-        $gemulexes = Gemulex32::all();
-
-        $quantidadeSum = DB::table('gemulex32s')
-            ->where('diametro', 'like', '%65X550%')
-            ->sum('quantidade');
-
-        $quantidadeFour = DB::table('gemulex32s')
-            ->where('diametro', 'like', '%90X550%')
-            ->sum('quantidade');
-        $gemulexes = Gemulex32::all();
-
+        // Lots by count
         $dadosPorLote = Gemulex32::select('numero_lote', DB::raw('sum(quantidade) as quantidade'))
-
             ->groupBy('numero_lote')
             ->get();
 
         $labels = $dadosPorLote->pluck('numero_lote');
-
         $quantidade = $dadosPorLote->pluck('quantidade');
 
-        //ANFO
-
+        // ANFO
         $dadosPorLoteAnfo = Anfo::select('numero_lote', DB::raw('sum(quantidade) as quantidade'))
             ->groupBy('numero_lote')
             ->get();
@@ -77,8 +51,33 @@ class HomeController extends Controller
 
         $quantidadeAnfos = DB::table('anfos')->sum('quantidade');
 
+        // Acessorios (assuming grouping by descricao)
+        $dadosPorLoteAcessorios = Paiolsobras::select('descricao', DB::raw('sum(quantidade) as quantidade'))
+            ->groupBy('descricao')
+            ->get();
 
+        $labelsSobras = $dadosPorLoteAcessorios->pluck('descricao');
+        $quantidadeSobras = $dadosPorLoteAcessorios->pluck('quantidade');
 
-        return view('home', compact('labels', 'quantidade', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo', 'gemulexes', 'quantidadeSum', 'quantidadeAnfos', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
+        // Specific Gemulex32 counts (optimized)
+        $quantidadeOne = DB::table('gemulex32s')
+            ->where('diametro', 'like', '%32X270%')
+            ->sum('quantidade');
+
+        $quantidadeTwo = DB::table('gemulex32s')
+            ->where('diametro', 'like', '%50X550%')
+            ->sum('quantidade');
+
+        $quantidadeSum = DB::table('gemulex32s')
+            ->where('diametro', 'like', '%65X550%')
+            ->sum('quantidade');
+
+        $quantidadeFour = DB::table('gemulex32s')
+            ->where('diametro', 'like', '%90X550%')
+            ->sum('quantidade');
+
+        $gemulexes = Gemulex32::all(); // Get all gemulex32s (potentially for display) 
+
+        return view('home', compact('labels', 'quantidade', 'dadosPorLoteAcessorios', 'dadosPorLote', 'labelsAnfo', 'quantidadeAnfo', 'gemulexes', 'quantidadeSum', 'quantidadeAnfos', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour', 'labelsSobras', 'quantidadeSobras'));
     }
 }

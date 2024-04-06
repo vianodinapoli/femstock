@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use App\Models\Paiolsobras;
 use Illuminate\Http\Request;
 
@@ -12,6 +12,11 @@ class PaiolsobrasController extends Controller
      */
     public function index()
     {
+
+
+
+
+
         $paiolsobras = Paiolsobras::all();
         return view('paiolsobras.index', compact('paiolsobras'));
     }
@@ -42,7 +47,6 @@ class PaiolsobrasController extends Controller
     {
         $paiolsobras = Paiolsobras::findOrFail($id);
         return view('paiolsobras.show', compact('paiolsobras'));
-
     }
 
     /**
@@ -60,7 +64,7 @@ class PaiolsobrasController extends Controller
     public function update(Request $request, string $id)
     {
         notify()->success('Material atualizado com sucesso');
-         $paiolsobras = Paiolsobras::findOrFail($id);
+        $paiolsobras = Paiolsobras::findOrFail($id);
         $paiolsobras->update($request->all());
         return redirect()->route('paiolsobras.index');
     }
@@ -76,4 +80,3 @@ class PaiolsobrasController extends Controller
         return redirect()->route('paiolsobras.index');
     }
 }
-

@@ -114,7 +114,7 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="myChart" width="400" height="165"></canvas>
 
                 </div>
 
@@ -259,7 +259,7 @@
                                 'rgba(34, 181, 204, 1)',
                                 'rgba(204, 0, 0, 1)',
                             ],
-                            borderWidth: 2
+                            borderWidth: 1
                         }]
                     },
                     options: {
@@ -272,6 +272,8 @@
                         }
                     }
                 });
+
+                
 
                 // Doughnut Chart for ANFO
                 const doughnutData = {

@@ -187,6 +187,20 @@
                     <span>ANCO</span></a>
             </li>
 
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                OFICINA
+            </div>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>STOCK</span></a>
+            </li>
+
 
 
 

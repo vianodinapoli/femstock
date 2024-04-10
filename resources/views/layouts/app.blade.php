@@ -196,7 +196,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('estoque.index')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>STOCK</span></a>
             </li>

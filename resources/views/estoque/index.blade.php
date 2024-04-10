@@ -77,14 +77,14 @@
           <td>{{ $estoque->marca_destino }}</td>
           <td>{{ $estoque->referencia }}</td>
           <td>{{ $estoque->descricao }}</td>
-          <td>{{ $estoque->data }}</td>
+          <td>{{ $estoque->data->format('d-m-Y') }}</td>
           <td>{{ $estoque->pecas_entradas }}</td>
           <td>{{ $estoque->pecas_saidas }}</td>
           <td>{{ $estoque->quantidade }}</td>
           <td>{{ $estoque->custo_unitario }}</td>
           <td>{{ $estoque->custo_total }}</td>
-          <td>{{ $estoque->created_at }}</td>
-          <td>{{ $estoque->updated_at }}</td>
+          <td>{{ $estoque->created_at->format('d-m-Y')}}</td>
+          <td>{{ $estoque->updated_at->format('d-m-Y') }}</td>
 
 
           

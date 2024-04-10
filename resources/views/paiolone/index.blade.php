@@ -6,7 +6,8 @@
 
 
 <div class="tabTitle">
-<h2>PAIOL 04 DE BOOSTERS, CORDÃO E MAIS</h2>
+<h2>PAIOL 01 DE BOOSTERS, CORDÃO E MAIS
+</h2>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 

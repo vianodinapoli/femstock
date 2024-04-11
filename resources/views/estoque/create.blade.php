@@ -42,6 +42,12 @@
         <input type="date" name="data"  id="data" class="form-control" required>
     </div>
 
+    <div class="form-group">
+        <label class="m-0 font-weight-bold text-black" for="pecas">Peças:</label>
+        <input type="number" name="pecas"  id="pecas" class="form-control" required>
+    </div>
+
+
 
 
     <div class="form-group">

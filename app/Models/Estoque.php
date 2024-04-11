@@ -14,6 +14,7 @@ class Estoque extends Model
         'referencia',
         'descricao',
         'data',
+        'pecas',
         'pecas_entradas',
         'pecas_saidas',
         'quantidade',

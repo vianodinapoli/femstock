@@ -56,6 +56,7 @@
         <th>Referência</th>
         <th>Descrição:</th>
         <th>Data</th>
+        <th>Peças</th>
         <th>Entradas</th>
         <th>Saídas</th>
         <th>Qtd.</th>
@@ -78,6 +79,7 @@
           <td>{{ $estoque->referencia }}</td>
           <td>{{ $estoque->descricao }}</td>
           <td>{{ $estoque->data->format('d-m-Y') }}</td>
+          <td>{{ $estoque->pecas }}</td>
           <td>{{ $estoque->pecas_entradas }}</td>
           <td>{{ $estoque->pecas_saidas }}</td>
           <td>{{ $estoque->quantidade }}</td>

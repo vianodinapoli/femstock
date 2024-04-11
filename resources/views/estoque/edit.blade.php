@@ -38,6 +38,11 @@
     </div>
 
     <div class="form-group">
+        <label class="m-0 font-weight-bold text-black" for="data">Peças:</label>
+        <input type="number" name="pecas" value="{{$estoque->pecas}}" class="form-control" required>
+    </div>
+
+    <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="pecas_entradas">Peças - Entradas:</label>
         <input type="number" name="pecas_entradas" value="{{$estoque->pecas_entradas}}" class="form-control" required>
     </div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('referencia');
             $table->string('descricao');
             $table->date('data');
-            // $table->integer('pecas')->after('data');
+            $table->integer('pecas')->after('data');
             $table->integer('pecas_entradas');
             $table->integer('pecas_saidas');
             $table->integer('quantidade');

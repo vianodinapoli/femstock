@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="tabTitle " >
-    <h2>PAIOL 03</h2>
+    <h2>PAIOL 05 - SOBRAS</h2>
     <hr>
     <a href="{{ route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 

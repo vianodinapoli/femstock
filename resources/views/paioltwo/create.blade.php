@@ -27,10 +27,7 @@
         <input type="text" name="descricao" id="descricao" class="form-control" required>
     </div>
 
-    <div class="form-group">
-        <label class="m-0 font-weight-bold text-black" for="data_recebido">Data de entrada:</label>
-        <input type="date" name="data_recebido" id="data_recebido" class="form-control" required>
-    </div>
+   
 
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="numero_lote">Referência/Número de lote:</label>

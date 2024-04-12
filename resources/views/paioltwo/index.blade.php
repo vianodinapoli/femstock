@@ -25,7 +25,6 @@
       <tr>
         <th>#</th>
         <th>Descição</th>
-        <th>Data recebido</th>
         <th>Referência/Número de lote:</th>
         <th>Data de produção</th>
         <th>Data de validade</th>
@@ -40,7 +39,6 @@
         <tr>
           <td>{{ $paioltwo->id }}</td>
           <td>{{ $paioltwo->descricao }}</td>
-          <td>{{ $paioltwo->data_recebido }}</td>
           <td>{{ $paioltwo->numero_lote }}</td>
           <td>{{ $paioltwo->data_producao }}</td>
           <td>{{ $paioltwo->data_validade }}</td>

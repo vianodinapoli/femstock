@@ -6,7 +6,7 @@
 
 
 <div class="tabTitle">
-<h2>Oficina</h2>
+<h2>OFICINA</h2>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 

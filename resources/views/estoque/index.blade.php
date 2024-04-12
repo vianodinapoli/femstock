@@ -62,8 +62,8 @@
         <th>Qtd.</th>
         <th>Custo Un</th>
         <th> Total</th>
-        <th>Regist em</th>
-        <th>Actual em</th>
+        {{-- <th>Regist em</th> --}}
+        {{-- <th>Actual em</th> --}}
 
 
 
@@ -85,8 +85,8 @@
           <td>{{ $estoque->quantidade }}</td>
           <td>{{ $estoque->custo_unitario }}</td>
           <td>{{ $estoque->custo_total }}</td>
-          <td>{{ $estoque->created_at->format('d-m-Y')}}</td>
-          <td>{{ $estoque->updated_at->format('d-m-Y') }}</td>
+          {{-- <td>{{ $estoque->created_at->format('d-m-Y')}}</td> --}}
+          {{-- <td>{{ $estoque->updated_at->format('d-m-Y') }}</td> --}}
 
 
           

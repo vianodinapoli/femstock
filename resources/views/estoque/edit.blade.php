@@ -63,10 +63,10 @@
         <input type="number" name="custo_unitario" value="{{$estoque->custo_unitario}}" class="form-control" required>
     </div>
 
-    <div class="form-group">
+    {{-- <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="custo_total">Custo Total:</label>
-        <input type="number" name="custo_total" value="{{$estoque->custo_total}}" class="form-control" required>
-    </div>
+        <input type="number" name="custo_total" value="{{ number_format($estoque->quantidade * $estoque->custo_unitario, 2) }}" class="form-control" required>
+    </div> --}}
 
 
 

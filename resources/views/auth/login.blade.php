@@ -17,8 +17,8 @@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">BEM VINDO(A)</h1>
-                                    <img src="{{ asset('assets/auth/img/logo FEM.jpg') }}" alt="Logo da Minha Empresa" style="width: 80%; margin-right: 40px;">
+                                    <h1 class="h3 text-gray-900 mb-4">ENTRAR</h1>
+                                    <img src="{{ asset('assets/auth/img/logo FEM2.png') }}" alt="Logo da Empresa" style="width: 80%; margin-right: 60px;">
                                 </div>
                                 <hr>
                                 <form method="POST" action="{{ route('login') }}">
@@ -56,7 +56,7 @@
             
                                     <div class=" mb-0">
                                         <div class="">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-danger">
                                                 {{ __('Login') }}
                                             </button>
 {{--             

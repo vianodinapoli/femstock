@@ -84,7 +84,7 @@
           <td>{{ $estoque->pecas_saidas }}</td>
           <td>{{ $estoque->quantidade }}</td>
           <td>{{ $estoque->custo_unitario }}</td>
-          <td>{{ number_format($estoque->quantidade * $estoque->custo_unitario, 2,2) }}</td>
+          <td>{{ number_format($estoque->quantidade * $estoque->custo_unitario, 2.1) }}</td>
           
           {{-- <td>{{ $estoque->created_at->format('d-m-Y')}}</td> --}}
           {{-- <td>{{ $estoque->updated_at->format('d-m-Y') }}</td> --}}

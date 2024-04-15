@@ -41,6 +41,12 @@
         <input type="date" name="data_producao" id="data_producao" class="form-control" required>
     </div>
 
+
+    <div class="form-group">
+        <label class="m-0 font-weight-bold text-black" for="data_recebido">Data de produção:</label>
+        <input type="date" name="data_recebido" id="data_recebido" class="form-control" required>
+    </div>
+
    
     <div class="form-group">
         <label class="m-0 font-weight-bold text-black" for="data_validade">Data de Validade:</label>

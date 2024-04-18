@@ -7,12 +7,14 @@
         <hr>
         <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-        <a href="{{ route('users.create') }}" class="btn btn-success mb-20 mb-20 float-right">
-            <i class="fa fa-plus"></i> Adicionar usuários
-        </a>
+        
+
+        <a  class="btn btn-success mb-20 mb-20 float-right" data-toggle="modal" data-target="#modalCriarUsuarios">
+            <i class="fa fa-plus"></i> Adicionar Usuário
+          </a>
     </div>
     <hr>
-
+    
     <div class="card shadow mb-4">
         
  <section id="loading">
@@ -61,6 +63,56 @@
     <x-notify::notify />
     @notifyJs
 
+<!-- Modal de criação -->
+<div class="modal fade" id="modalCriarUsuarios" tabindex="-1" role="dialog" aria-labelledby="modalCriarUsuarios" aria-hidden="true">
+    <div class="modal-dialog" role="">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCriarUsuarios">Adicionar Viatura</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form action="{{route('users.store')}}"  method="post">
+                    @csrf
+                
+                    {{-- <input type="text"  name="name" placeholder="Digite seu nome" required>
+                    <input type="text"  name="email" placeholder="Digite seu email" required>
+                    <input type="text"  name="password" placeholder="Digite sua senha" required>
+                 --}}
+                
+                
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="name">Nome:</label>
+                        <input type="text"  name="name" placeholder="Digite seu nome" class="form-control" required>
+                    </div>
+                
+                   
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="email">Email:</label>
+                        <input type="text"  name="email" placeholder="Digite seu email" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="password">Senha:</label>
+                        <input type="text"  name="password" placeholder="Digite sua senha" class="form-control" required>
+                    </div>
+                
+                
+                
+                
+                
+                
+                
+                    <button type="submit" class=" btn btn-success mb-20 mb-20 float-right">Criar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>

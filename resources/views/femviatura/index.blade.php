@@ -2,18 +2,17 @@
 @notifyCss
 
 @section('content')
-
-
 <div class="tabTitle">
-
 
 <h4>Controle de documentos de Viaturas</h4>
 <hr>
 <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
-<a href="{{ route('femviatura.create') }}" class="btn btn-success mb-20 mb-20 float-right">
+<a  class="btn btn-success mb-20 mb-20 float-right" data-toggle="modal" data-target="#modalCriarViatura">
   <i class="fa fa-plus"></i> Adicionar Viatura
 </a>
 </div>
+
+
 <hr>
 
 <div class="card shadow mb-4">
@@ -56,20 +55,13 @@
               <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
               
                 <i class="fa fa-file"></i> Baixar PDF
-              
           </a>
             </td>
-              
-          
           <td class="acao">
            <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
             <i class="fa-regular fa-pen-to-square"></i>   
         </a>
-
-        
-             
-            {{-- <a href="{{ route('femviatura.destroy', $femviatura->id) }}">Excluir</a> --}}
-            <form action="{{route('femviatura.destroy',['femviatura' => $femviatura->id])}}" method="post">
+                <form action="{{route('femviatura.destroy',['femviatura' => $femviatura->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
 <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="fas fa-trash"></i></button>
@@ -82,6 +74,70 @@
 </div>
   <x-notify::notify />
   @notifyJs
+
+
+  <!-- Modal de criação -->
+<div class="modal fade" id="modalCriarViatura" tabindex="-1" role="dialog" aria-labelledby="modalCriarViaturaLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalCriarViaturaLabel">Adicionar Viatura</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form method="post" action="{{ route('femviatura.store') }}" enctype="multipart/form-data">
+                  @csrf
+
+                  <!-- Seu formulário aqui -->
+                  <form method="post" action="{{ route('femviatura.store') }}" enctype="multipart/form-data">
+                    @csrf
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="marca">Marca e Matrícula:</label>
+                        <input type="text" name="marca" id="marca" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="modelo">Modelo:</label>
+                        <input type="text" name="modelo" id="modelo" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="cor">Cor:</label>
+                        <input type="text" name="cor" id="cor" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="ano_fabricacao">Ano de Fabricação:</label>
+                        <input type="number" name="ano_fabricacao" id="ano_fabricacao" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="seguro">Seguro:</label>
+                        <input type="date" name="seguro" id="seguro" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="inspecao">Data de Inspeção:</label>
+                        <input type="date" name="inspecao" id="inspecao" class="form-control" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="m-0 font-weight-bold text-black" for="documento">Documento:</label>
+                        <input type="file" name="documento" id="documento" class="form-control" required>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Criar Viatura</button>
+                </form>
+                  <!-- ... -->
+
+          </div>
+      </div>
+  </div>
+</div>
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">

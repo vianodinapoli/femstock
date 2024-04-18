@@ -23,7 +23,7 @@ class AnfoController extends Controller
 
     public function store(Request $request)
     {
-        notify()->success('Registado com sucesso');
+        notify()->success('Registado com sucesso', 'Feito');
 
         Anfo::create($request->all());
         return redirect()->route('anfo.index');
@@ -43,7 +43,7 @@ class AnfoController extends Controller
 
     public function update(Request $request, $id)
     {
-        notify()->success('Actualizado com sucesso');
+        notify()->success('Actualizado com sucesso', 'Feito');
 
         $anfo = Anfo::findOrFail($id);
         $anfo->update($request->all());

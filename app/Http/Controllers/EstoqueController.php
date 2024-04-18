@@ -19,7 +19,7 @@ class EstoqueController extends Controller
 
     public function store(Request $request)
     {
-        notify()->success('Material adicionado com sucesso');
+        notify()->success('Material adicionado com sucesso', 'Feito');
 
         $estoque = Estoque::create($request->all());
         return redirect()->route('estoque.index');
@@ -37,7 +37,7 @@ class EstoqueController extends Controller
 
     public function update(Request $request, Estoque $estoque)
     {
-        notify()->success('Material atualizado com sucesso');
+        notify()->success('Material atualizado com sucesso', 'Feito');
 
         $estoque->update($request->all());
         return redirect()->route('estoque.index');
@@ -45,7 +45,7 @@ class EstoqueController extends Controller
 
     public function destroy(Estoque $estoque)
     {
-        notify()->success('Material apagado com sucesso');
+        notify()->success('Material apagado com sucesso', 'Feito');
 
         $estoque->delete();
         return redirect()->route('estoque.index');

@@ -24,10 +24,6 @@ class UserController extends Controller
     {
         $users = $this->user->all();
         return view(view: 'users', data: ['users' => $users]);
-
-       
-
-        
     }
 
     /**
@@ -43,15 +39,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-      
-       
+
+
 
         $created = $this->user->create([
             'name' => $request->input(key: 'name'),
             'email' => $request->input(key: 'email'),
             'password' => password_hash($request->input(key: 'password'), PASSWORD_DEFAULT),
         ]);
-        notify()->success('Usuário adicionado com sucesso');
+        notify()->success('Usuário adicionado com sucesso', 'Feito');
         // if ($created){
         //     return redirect()->back()->with(key:'message', value:'Criado com sucesso');
         // }
@@ -88,7 +84,7 @@ class UserController extends Controller
         // if ($updated){
         //     return redirect()->back()->with(key:'message', value:'Actualizado com sucesso');
         // }
-        notify()->success('Actualizado com sucesso com sucesso');
+        notify()->success('Actualizado com sucesso com sucesso', 'feito');
 
 
         $user = User::findOrFail($id);
@@ -100,19 +96,17 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email,' . $id,
             'password' => 'nullable|string|min:8',
         ]);
-    
+
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        
+
         // Verificar se a senha foi fornecida e atualizar se necessário
         if ($request->has('password')) {
             $user->password = Hash::make($request->password);
         }
-    
+
         $user->save();
-
-
     }
 
     /**
@@ -120,8 +114,8 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        
-        notify()->success('Usuário apagado com sucesso!');
+
+        notify()->success('Usuário apagado com sucesso!', 'Feito');
 
 
         $this->user->where('id', $id)->delete();

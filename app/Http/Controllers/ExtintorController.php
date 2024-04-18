@@ -22,7 +22,7 @@ use App\Models\Femviatura;
         public function store(Request $request)
         {
             
-                notify()->success('Extintor adicionado com sucesso');
+                notify()->success('Extintor adicionado com sucesso', 'Feito');
                 Extintor::create($request->all());
 
     
@@ -43,7 +43,7 @@ use App\Models\Femviatura;
     
         public function update(Request $request, Extintor $extintor)
         {
-            notify()->success('Extintor actualizado com sucesso');
+            notify()->success('Extintor actualizado com sucesso', 'Feito');
             $extintor->update($request->all());
     
             return redirect()->route('extintor.index');
@@ -51,7 +51,7 @@ use App\Models\Femviatura;
     
         public function destroy(string $id)
         {
-            notify()->success('Extintor apagado com sucesso');
+            notify()->success('Extintor apagado com sucesso', 'Feito');
             $extintor = Extintor::findOrFail($id);
             $extintor->delete();
             return redirect()->route('extintor.index');

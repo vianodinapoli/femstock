@@ -31,7 +31,7 @@ class FemviaturaController extends Controller
 
         try {
             Femviatura::create($input);
-            notify()->success('Viatura adicionada com sucesso');
+            notify()->success('Viatura adicionada com sucesso',  'Feito');
         } catch (\Throwable $th) {
             // Log the error or display a user-friendly message
             report($th);
@@ -55,7 +55,7 @@ class FemviaturaController extends Controller
 
     public function update(Request $request, Femviatura $femviatura)
     {
-        notify()->success('Viatura actualizada com sucesso');
+        notify()->success('Viatura actualizada com sucesso', 'Feito');
         $femviatura->update($request->all());
 
         return redirect()->route('femviatura.index');
@@ -63,7 +63,7 @@ class FemviaturaController extends Controller
 
     public function destroy(string $id)
     {
-        notify()->success('Viatura apagada com sucesso');
+        notify()->success('Viatura apagada com sucesso', 'Feito');
         $femViatura = Femviatura::findOrFail($id);
         $femViatura->delete();
         return redirect()->route('femviatura.index');

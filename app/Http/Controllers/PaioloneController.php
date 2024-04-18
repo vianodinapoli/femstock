@@ -29,7 +29,7 @@ class PaioloneController extends Controller
      */
     public function store(Request $request)
     {
-        notify()->success('Material adicionado com sucesso');
+        notify()->success('Material adicionado com sucesso', 'Feito');
 
         Paiolone::create($request->all());
         return redirect()->route('paiolone.index');
@@ -59,7 +59,7 @@ class PaioloneController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        notify()->success('Material atualizado com sucesso');
+        notify()->success('Material atualizado com sucesso', 'Feito');
          $paiolone = Paiolone::findOrFail($id);
         $paiolone->update($request->all());
         return redirect()->route('paiolone.index');
@@ -70,7 +70,7 @@ class PaioloneController extends Controller
      */
     public function destroy(string $id)
     {
-        notify()->success('Material apagado com sucesso');
+        notify()->success('Material apagado com sucesso', 'Feito');
         $paiolone = Paiolone::findOrFail($id);
         $paiolone->delete();
         return redirect()->route('paiolone.index');

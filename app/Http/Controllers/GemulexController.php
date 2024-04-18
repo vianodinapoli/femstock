@@ -54,7 +54,7 @@ class GemulexController extends Controller
      */
     public function store(Request $request)
     {
-        notify()->success('Gemulex adicionado com sucesso');
+        notify()->success('Gemulex adicionado com sucesso', 'Feito');
 
         Gemulex32::create($request->all());
         return redirect()->route('gemulex.index');
@@ -84,7 +84,7 @@ class GemulexController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        notify()->success('Gemulex atualizado com sucesso');
+        notify()->success('Gemulex atualizado com sucesso', 'Feito');
          $gemulex = Gemulex32::findOrFail($id);
         $gemulex->update($request->all());
         return redirect()->route('gemulex.index');
@@ -95,7 +95,7 @@ class GemulexController extends Controller
      */
     public function destroy(string $id)
     {
-        notify()->success('Gemulex apagado com sucesso');
+        notify()->success('Gemulex apagado com sucesso', 'Feito');
         $gemulex = Gemulex32::findOrFail($id);
         $gemulex->delete();
         return redirect()->route('gemulex.index');

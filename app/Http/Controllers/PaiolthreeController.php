@@ -28,7 +28,7 @@ class PaiolthreeController extends Controller
      */
     public function store(Request $request)
     {
-        notify()->success('Material adicionado com sucesso');
+        notify()->success('Material adicionado com sucesso', 'Feito');
 
         Paiolthree::create($request->all());
         return redirect()->route('paiolthree.index');
@@ -58,7 +58,7 @@ class PaiolthreeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        notify()->success('Material atualizado com sucesso');
+        notify()->success('Material atualizado com sucesso', 'Feito');
          $paiolthree = Paiolthree::findOrFail($id);
         $paiolthree->update($request->all());
         return redirect()->route('paiolthree.index');
@@ -69,7 +69,7 @@ class PaiolthreeController extends Controller
      */
     public function destroy(string $id)
     {
-        notify()->success('Material apagado com sucesso');
+        notify()->success('Material apagado com sucesso', 'Feito');
         $paiolthree = Paiolthree::findOrFail($id);
         $paiolthree->delete();
         return redirect()->route('paiolthree.index');

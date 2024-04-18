@@ -28,7 +28,7 @@ class PaioltwoController extends Controller
      */
     public function store(Request $request)
     {
-        notify()->success('Material adicionado com sucesso');
+        notify()->success('Material adicionado com sucesso', 'Feito');
 
         Paioltwo::create($request->all());
         return redirect()->route('paioltwo.index');
@@ -58,7 +58,7 @@ class PaioltwoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        notify()->success('Material atualizado com sucesso');
+        notify()->success('Material atualizado com sucesso', 'Feito');
          $paioltwo = Paioltwo::findOrFail($id);
         $paioltwo->update($request->all());
         return redirect()->route('paioltwo.index');
@@ -69,7 +69,7 @@ class PaioltwoController extends Controller
      */
     public function destroy(string $id)
     {
-        notify()->success('Material apagado com sucesso');
+        notify()->success('Material apagado com sucesso', 'Feito');
         $paioltwo = Paioltwo::findOrFail($id);
         $paioltwo->delete();
         return redirect()->route('paioltwo.index');

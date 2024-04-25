@@ -56,8 +56,33 @@ class FemviaturaController extends Controller
     public function update(Request $request, Femviatura $femviatura)
     {
         notify()->success('Viatura actualizada com sucesso', 'Feito');
-        $femviatura->update($request->all());
-
+        $validatedData = $request->validate([
+            'documento' => 'nullable|file|mimes:pdf,docx,jpeg,jpg,png',
+        ]);
+    
+        if ($request->hasFile('documento')) {
+            $image = $request->file('documento');
+            $destinationPath = 'documentos/';
+            $documento = date('YmdHis') . "." . $image->getClientOriginalExtension();
+    
+            try {
+                $image->move($destinationPath, $documento);
+                $validatedData['documento'] = $documento;
+            } catch (\Exception $e) {
+                // Handle file upload error (e.g., log the error or display a user-friendly message)
+                report($e);
+                return redirect()->back()->withErrors(['error' => 'Erro ao carregar o documento']);
+            }
+        }
+    
+        try {
+            $femviatura->update($validatedData);
+            notify()->success('Viatura actualizada com sucesso', 'Feito');
+        } catch (\Throwable $th) {
+            // Handle database update error (e.g., log the error or display a user-friendly message)
+            report($th);
+            return redirect()->back()->withErrors(['error' => 'Erro ao actualizar viatura']);
+        }
         return redirect()->route('femviatura.index');
     }
 

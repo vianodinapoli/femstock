@@ -12,7 +12,7 @@
 
 <a href="#" class="btn btn-primary btn-icon-split">
     <span class="icon text-white-50">
-        <i class="fa-regular fa-pen-to-square"></i> 
+        <i class="fas fa-edit fa-sm"></i> 
     </span>
     <span class="text">Editar - {{$estoque->marca_destino}}</span>
 </a>

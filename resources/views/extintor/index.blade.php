@@ -48,7 +48,7 @@
           
           <td class="acao">
            <a href="{{ route('extintor.edit', $extintor->id) }}" class="btn btn-primary">
-            <i class="fa-regular fa-pen-to-square"></i>   
+            <i class="fas fa-edit fa-sm"></i>   
         </a>
 
             {{-- <a href="{{ route('extintor.destroy', $extintor->id) }}">Excluir</a> --}}

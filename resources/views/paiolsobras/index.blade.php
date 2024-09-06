@@ -33,12 +33,12 @@
                 <td>{{ $paiolsobra->updated_at }}</td>
                 <td style="display: flex; justify-content: space-evenly; align-items: flex-start;">
                     <a href="{{ route('paiolsobras.edit', $paiolsobra->id) }}" class="btn btn-primary">
-                        <i class="fa-regular fa-pen-to-square"></i>
+                        <i class="fas fa-edit fa-sm"></i>
                     </a>
                     <form action="{{ route('paiolsobras.destroy', $paiolsobra->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-    <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="fas fa-trash"></i></button>
+    <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
                     </form>
                 </td>
             </tr>

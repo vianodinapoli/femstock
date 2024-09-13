@@ -43,13 +43,13 @@
           display: flex;
           justify-content: space-evenly;
           align-items: flex-start;">
-                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary">
+                            <a href="{{ route('users.edit', $user->id) }}" class="btn-sm btn btn-primary">
                                 <i class="fas fa-edit fa-sm"></i>
                             </a>
                             <form class="form" action="{{ route('users.destroy', ['user' => $user->id]) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
+                                <button type="submit" class="btn btn-sm btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
                             </form>
                         </td>
                     </tr>

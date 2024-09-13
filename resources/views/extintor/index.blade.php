@@ -47,7 +47,7 @@
               
           
           <td class="acao">
-           <a href="{{ route('extintor.edit', $extintor->id) }}" class="btn btn-primary">
+           <a href="{{ route('extintor.edit', $extintor->id) }}" class="btn btn-sm btn-primary">
             <i class="fas fa-edit fa-sm"></i>   
         </a>
 
@@ -55,7 +55,7 @@
             <form action="{{route('extintor.destroy',['extintor' => $extintor->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    <button type="submit" class="btn-sm btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </form>
           </td>
         </tr>

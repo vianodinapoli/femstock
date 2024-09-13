@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('paiolones', function (Blueprint $table) {
             $table->id();
             $table->string('descricao');
-            $table->date('data_recebido');
+            // $table->date('data_recebido');
             $table->string('numero_lote');
             $table->date('data_producao');
             $table->date('data_validade');

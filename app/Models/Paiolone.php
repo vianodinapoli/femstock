@@ -9,7 +9,7 @@ class Paiolone extends Model
 {
     protected $fillable = [
         'descricao',
-        'data_recebido',
+       
         'numero_lote',
         'data_producao',
         'data_validade',

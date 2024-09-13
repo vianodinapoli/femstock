@@ -58,15 +58,15 @@
 </div>
 <div class="card shadow mb-4">
 
-<table class="table table-bordered" id="dataTable" width="100%" cellspacing="10">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <thead>
       <tr>
         <th>#</th>
         <th>Descição/Diametro</th>
-        <th>Data recebido</th>
-        <th>Referência/Número de lote:</th>
-        <th>Data de produção</th>
-        <th>Data de validade</th>
+        <th>Recebido</th>
+        <th>Número de lote:</th>
+        <th>Produção</th>
+        <th>Validade</th>
         <th>Quantidade</th>
 
         <th>Ações</th>
@@ -87,15 +87,15 @@
           <td style="
           display: flex;
           justify-content: space-evenly;
-          align-items: flex-start;">
-           <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-primary">
+          align-items: flex-start; padding:10px;">
+           <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-sm btn-primary">
             <i class="fas fa-edit fa-sm"></i>
         </a>
 
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-<button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
+<button type="submit" class="btn btn-sm btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
                 </form>
           </td>
         </tr>

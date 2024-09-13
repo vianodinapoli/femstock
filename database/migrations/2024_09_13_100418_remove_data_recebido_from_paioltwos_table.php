@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('estoques', function (Blueprint $table) {
-            $table->integer('pecas')->after('data');
+        Schema::table('paioltwos', function (Blueprint $table) {
+            $table->dropColumn('data_recebido');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('estoques', function (Blueprint $table) {
-            //
+        Schema::table('paioltwos', function (Blueprint $table) {
+            $table->date('data_recebido');
         });
     }
 };

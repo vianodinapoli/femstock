@@ -52,7 +52,7 @@
               Download</img>
              --}}
 
-             <a class="btn btn-secondary" href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
+             <a class="btn btn-sm btn-secondary" href="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank">
               <img src="{{ asset('/documentos/' . $femviatura->documento) }}" target="_blank" width="0px">
               
                 <i class="fa fa-file"></i> Baixar PDF
@@ -62,7 +62,7 @@
               
           
           <td class="acao">
-           <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-primary">
+           <a href="{{ route('femviatura.edit', $femviatura->id) }}" class="btn btn-sm btn-primary">
             <i class="fas fa-edit fa-sm"></i>   
         </a>
 
@@ -72,7 +72,7 @@
             <form action="{{route('femviatura.destroy',['femviatura' => $femviatura->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-<button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
+<button type="submit" class="btn btn-sm btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
                 </form>
           </td>
         </tr>

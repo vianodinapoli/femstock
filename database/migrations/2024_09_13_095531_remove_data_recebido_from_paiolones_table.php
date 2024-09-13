@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('paioltwos', function (Blueprint $table) {
+        Schema::table('paiolones', function (Blueprint $table) {
             $table->dropColumn('data_recebido');
         });
-        
     }
 
     /**
@@ -22,10 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('paioltwos', function (Blueprint $table) {
-            // Adicione a coluna 'telefone' novamente aqui (opcional)
-            $table->string('data_recebido')->nullable();
+        Schema::table('paiolones', function (Blueprint $table) {
+            $table->date('data_recebido');
         });
-    
     }
 };

@@ -92,7 +92,7 @@
 
         <!-- Area Chart -->
         <div class="col-xl-7 col-lg-7" id="myChartCard">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4" style="overflow-x: auto;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Lotes disponíveis de Gemulex</h6>
@@ -191,7 +191,7 @@
         </div>
 
         <div class="col-xl-12 col-lg-12">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4" style="overflow-x: auto;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Quantidades de Sobras por material</h6>

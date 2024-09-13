@@ -13,7 +13,7 @@
     </a>
 </div>
 <hr>
-<div class="card shadow mb-4">
+<div class="card shadow mb-4" style="overflow-x: auto;">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>

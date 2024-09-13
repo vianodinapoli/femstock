@@ -13,7 +13,7 @@
     </div>
     <hr>
 
-    <div class="card shadow mb-4">
+    <div class="card shadow mb-4" style="overflow-x: auto;">
         
  <section id="loading">
     <div id="loading-content"></div>

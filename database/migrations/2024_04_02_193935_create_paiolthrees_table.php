@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('paiolthrees', function (Blueprint $table) {
             $table->id();
             $table->string('descricao');
-            $table->date('data_recebido');
             $table->string('numero_lote');
             $table->date('data_producao');
             $table->date('data_validade');

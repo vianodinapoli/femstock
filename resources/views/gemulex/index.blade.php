@@ -30,21 +30,31 @@
     </span>
     <span class="text">{{$quantidadeTwo}}</span>
   </a>
-  
+
   <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 65
     </span>
-    <span class="text">{{$quantidadeSum}}</span>
+    <span class="text">{{$quantidadeThree}}</span>
   </a>
+
+  <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
+    <span class="icon text-white-50">
+        Caixas de 80
+    </span>
+    <span class="text">{{$quantidadeFour}}</span>
+  </a>
+
+
+
   <a href="#" class="btn btn-info btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 90
     </span>
-    <span class="text">{{$quantidadeFour}}</span>
+    <span class="text">{{$quantidadeFive}}</span>
   </a>
-  
-  
+
+
 </div>
 <div class="card shadow mb-4">
 
@@ -64,7 +74,7 @@
     </thead>
     <tbody>
       @foreach ($gemulexes as $gemulex)
-      
+
         <tr>
           <td>{{ $gemulex->id }}</td>
           <td>{{ $gemulex->diametro }}</td>
@@ -73,15 +83,15 @@
           <td>{{ $gemulex->data_producao }}</td>
           <td>{{ $gemulex->data_validade }}</td>
           <td>{{ $gemulex->quantidade }}</td>
-          
+
           <td style="
           display: flex;
           justify-content: space-evenly;
           align-items: flex-start;">
            <a href="{{ route('gemulex.edit', $gemulex->id) }}" class="btn btn-primary">
-            <i class="fas fa-edit fa-sm"></i> 
+            <i class="fas fa-edit fa-sm"></i>
         </a>
-             
+
             <form action="{{route('gemulex.destroy',['gemulex' => $gemulex->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
@@ -98,7 +108,7 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
- 
+
      $('.show_confirm').click(function(event) {
           var form =  $(this).closest("form");
           var name = $(this).data("name");

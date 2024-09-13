@@ -28,17 +28,21 @@ class GemulexController extends Controller
         ->sum('quantidade');
         $gemulexes = Gemulex32::all();
 
-        $quantidadeSum = DB::table('gemulex32s')
+        $quantidadeThree = DB::table('gemulex32s')
         ->where('diametro', 'like', '%65X550%')
         ->sum('quantidade');
 
         $quantidadeFour = DB::table('gemulex32s')
+        ->where('diametro', 'like', '%80X550%')
+        ->sum('quantidade');
+
+        $quantidadeFive = DB::table('gemulex32s')
         ->where('diametro', 'like', '%90X550%')
         ->sum('quantidade');
         $gemulexes = Gemulex32::all();
 
 
-    return view('gemulex.index', compact('gemulexes', 'quantidadeSum', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
+    return view('gemulex.index', compact('gemulexes', 'quantidadeThree', 'quantidadeFive', 'quantidadeOne', 'quantidadeTwo', 'quantidadeFour'));
     }
 
     /**

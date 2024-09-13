@@ -4,7 +4,7 @@
     @if (session()->has('message'))
         {{ session()->get('message') }}
     @endif
-    <a href="{{ url()->previous() }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+    <a href="{{ url()->previous() }}" class="class="btn btn-sm btn-outline-secondary""><i class="fas fa-arrow-left"></i> </a>
 
     <a href="#" class="btn btn-secondary btn-icon-split">
         <span class="icon text-white-50">

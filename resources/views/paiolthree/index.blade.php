@@ -8,7 +8,7 @@
 <div class="tabTitle">
 <h2>PAIOL 03</h2>
 <hr>
-<a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+<a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary""><i class="fas fa-arrow-left"></i> </a>
 
 <a href="{{ route('paiolthree.create') }}" class="btn btn-success float-right">
   <i class="fa fa-plus"></i>Adicionar Material

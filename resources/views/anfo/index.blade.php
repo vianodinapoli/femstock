@@ -5,19 +5,18 @@
 
 <div class="tabTitle">
 
-  <h2 class="mb-4 mt-4">DINAMITE ANFO</h2>
+  <h2 class="mb-4 mt-0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ">DINAMITE ANFO</h2>
 
-  <hr>
-  <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+  <a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary""><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('anfo.create') }}" class="btn btn-success mb-20 mb-20 float-right">
+<a href="{{ route('anfo.create') }}" class="btn btn-sm btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i> Adicionar Anfo
 </a>
 </div>
 <hr>
 
 <div style="  text-align: left;">
-<a href="#" class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+<a href="#" class="btn btn-sm btn-primary btn-icon-split" style="margin-bottom: 10px">
   <span class="icon text-white-50">
       Total de Anfo
   </span>
@@ -56,7 +55,7 @@
           justify-content: space-evenly;
           align-items: flex-start;">
             {{-- <a href="{{ route('anfo.edit', $anfo->id) }}">Editar</a> --}}
-            <a href="{{ route('anfo.edit', $anfo->id) }}" class="btn btn-primary">
+            <a href="{{ route('anfo.edit', $anfo->id) }}" class="btn btn-sm  btn-primary">
               <i class="fas fa-edit fa-sm"></i> 
           </a> 
             {{-- <a href="{{ route('anfos.show', $anfo->id) }}">Detalhes</a> |  --}}
@@ -64,7 +63,7 @@
             <form action="{{route('anfo.destroy',['anfo' => $anfo->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-<button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
+<button type="submit" class="btn btn-sm btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'> <i class="fas fa-trash fa-sm"></i></button>
                 </form>
           </td>
         </tr>

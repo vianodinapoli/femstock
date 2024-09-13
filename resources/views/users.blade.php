@@ -5,7 +5,7 @@
     <div class="tabTitle">
         <h2 class="">Usuários</h2>
         <hr>
-        <a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+        <a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary""><i class="fas fa-arrow-left"></i> </a>
 
         <a href="{{ route('users.create') }}" class="btn btn-success mb-20 mb-20 float-right">
             <i class="fa fa-plus"></i> Adicionar usuários

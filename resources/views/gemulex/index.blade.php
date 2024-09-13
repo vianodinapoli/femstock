@@ -8,9 +8,9 @@
 <div class="tabTitle">
 <h2>PAIOL 04 DE GEMULEX</h2>
 <hr>
-<a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+<a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-<a href="{{ route('gemulex.create') }}" class="btn btn-success mb-20 mb-20 float-right">
+<a href="{{ route('gemulex.create') }}" class="btn btn-sm btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i>Adicionar Gemulex de 32, 50, 65 e 90
 </a>
 
@@ -18,27 +18,27 @@
 <hr>
 
 <div class="gemulex" style="text-align:left;" >
-  <a  class="btn btn-primary btn-icon-split" style="margin-bottom: 10px">
+  <a  class="btn btn-sm btn-primary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 32
     </span>
     <span class="text">{{$quantidadeOne}}</span>
   </a>
-  <a href="#" class="btn btn-danger btn-icon-split" style="margin-bottom: 10px">
+  <a href="#" class="btn btn-sm btn-danger btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 50
     </span>
     <span class="text">{{$quantidadeTwo}}</span>
   </a>
 
-  <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
+  <a href="#" class="btn btn-sm btn-secondary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 65
     </span>
     <span class="text">{{$quantidadeThree}}</span>
   </a>
 
-  <a href="#" class="btn btn-secondary btn-icon-split" style="margin-bottom: 10px">
+  <a href="#" class="btn btn-sm btn-secondary btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 80
     </span>
@@ -47,7 +47,7 @@
 
 
 
-  <a href="#" class="btn btn-info btn-icon-split" style="margin-bottom: 10px">
+  <a href="#" class="btn btn-sm btn-info btn-icon-split" style="margin-bottom: 10px">
     <span class="icon text-white-50">
         Caixas de 90
     </span>

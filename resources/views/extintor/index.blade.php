@@ -7,9 +7,9 @@
 <div class="tabTitle">
 
 
-<h2>Controle de validade de extintores - FEM</h2>
+<h2>EXTINTORES - FEM</h2>
 <hr>
-<a href="{{route('home') }}" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
+<a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 <a href="{{ route('extintor.create') }}" class="btn btn-success mb-20 mb-20 float-right">
   <i class="fa fa-plus"></i> Adicionar Extintor
 </a>
@@ -22,7 +22,7 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Numero ou descrição</th>
+        <th>NÚmero ou descrição</th>
         <th>Agente </th>
         <th>Peso</th>
         <th>Localização</th>
@@ -55,7 +55,7 @@
             <form action="{{route('extintor.destroy',['extintor' => $extintor->id])}}" method="post">
                 @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn-sm btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </form>
           </td>
         </tr>

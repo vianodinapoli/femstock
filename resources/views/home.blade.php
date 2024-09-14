@@ -9,10 +9,10 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Usuários no sistema</div>
-                            <div class="h6 mb-0 font-weight-bold text-gray-800"><a
-                                    href="{{ route('users.index') }}">USUÁRIOS</a></div>
+                            <div class="text-sm font-weight-light text-primary text-uppercase mb-1">
+                                <a
+                                href="{{ route('users.index') }}">Usuários no sistema</a> </div>
+                           
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-users fa-2x text-gray-300"></i>

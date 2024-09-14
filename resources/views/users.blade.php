@@ -3,21 +3,21 @@
 
 @section('content')
     <div class="tabTitle">
-        <h2 class="">Usuários</h2>
-        <hr>
-        <a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary""><i class="fas fa-arrow-left"></i> </a>
+       
+        <a href="{{route('home') }}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-arrow-left"></i> </a>
 
-        <a href="{{ route('users.create') }}" class="btn btn-success mb-20 mb-20 float-right">
+        <a href="{{ route('users.create') }}" class="btn btn-sm btn-success mb-20 mb-20 float-right">
             <i class="fa fa-plus"></i> Adicionar usuários
         </a>
     </div>
     <hr>
+    
+   
 
     <div class="card shadow mb-4" style="overflow-x: auto;">
+
         
- <section id="loading">
-    <div id="loading-content"></div>
-  </section>
+
 
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
